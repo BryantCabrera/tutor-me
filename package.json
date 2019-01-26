@@ -1,0 +1,19 @@
+{
+  "name": "tutor-me",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BryantCabrera/tutor-me.git"
+  },
+  "author": "Bryant Cabrera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BryantCabrera/tutor-me/issues"
+  },
+  "homepage": "https://github.com/BryantCabrera/tutor-me#readme"
+}
