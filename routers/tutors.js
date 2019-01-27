@@ -30,7 +30,7 @@ router.get('/new', (req, res) => {
 });
 
 //Create Route
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
     try {
         const createdTutor = await Tutor.create(req.body);
         res.redirect(`/tutors/${createdTutor._id}/edit`);
@@ -41,7 +41,9 @@ router.post('/', (req, res) => {
 
 //Edit Route
 router.get('/:id/edit', (req, res) => {
-
+    // try {
+    //     const foundTutor = await
+    // }
 });
 
 //Update Route
