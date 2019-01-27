@@ -32,7 +32,12 @@ router.get('/new', (req, res) => {
 
 //Create Route
 router.post('/', async (req, res) => {
-
+    try {
+        const createdStudent = await Student.create(req.body);
+        res.redirect(`/tutors/${createdStudent._id}/edit`);
+    } catch (err) {
+        res.send(err);
+    }
 });
 
 //Edit Route
