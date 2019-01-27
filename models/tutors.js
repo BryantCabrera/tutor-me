@@ -4,7 +4,7 @@ const Student = require('./students');
 
 const tutorSchema = new mongoose.Schema({
     name: {type: String, required: true},
-    email: {type: String, required: true},
+    email: {type: String, required: true, unique: true},
     password: {type: String, required: true},
     rate: {type: Number, required: true},
     paymentInfo: {type: String, required: true},
@@ -16,7 +16,8 @@ const tutorSchema = new mongoose.Schema({
     rating: Number,
     feedback: [Comment.schema],
     students: [Student.schema],
-    memberSince: Date
+    memberSince: Date,
+    account: tutor
 });
 
 const Tutor = mongoose.model('Tutor', tutorSchema);
