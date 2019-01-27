@@ -67,7 +67,9 @@ router.get('/:id', async (req, res) => {
     try {
         const foundTutor = await Tutor.findById(req.params.id);
 
-        res.render('../views/tutors/show.ejs');
+        res.render('../views/tutors/show.ejs', {
+            tutor: foundTutor
+        });
     } catch (err) {
         res.send(err);
     }
