@@ -32,7 +32,8 @@ router.get('/new', (req, res) => {
 //Create Route
 router.post('/', (req, res) => {
     try {
-
+        const createdTutor = await Tutor.create(req.body);
+        res.redirect(`/tutors/${createdTutor._id}/edit`);
     } catch (err) {
         res.send(err);
     }
