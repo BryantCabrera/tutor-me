@@ -85,12 +85,12 @@ router.delete('/:id', async (req, res) => {
         const deletedTutorStudents = await Student.find({ _id: {$in: deletedTutor.students} });
 
         deletedTutorStudents.forEach(student => {
-            student.tutors.forEach( (tutor, index) => {
+            student.tutors.forEach(async (tutor, index) => {
             if (tutor === deletedTutor._id) {
                 student.splice(index, 1);
             }
 
-            await student.save();
+            student.save();
         }
         )});
 

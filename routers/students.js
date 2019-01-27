@@ -90,7 +90,7 @@ router.delete('/:id', async (req, res) => {
                 tutor.splice(index, 1);
             }
 
-            await tutor.save();
+            tutor.save();
         }
         )});
 

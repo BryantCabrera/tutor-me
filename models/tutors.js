@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Comment = require('./comments');
+const extras = require('./extras');
 
 const tutorSchema = new mongoose.Schema({
     name: {type: String, required: true},
@@ -10,13 +10,13 @@ const tutorSchema = new mongoose.Schema({
     location: {type: Number, required: true},
     profilePicture: String,
     description: String,
-    subjects: [String],
-    availability: [Date],
+    // subjects: [extras.subjectSchema],
+    // availability: [extras.availabilitySchema],
     rating: Number,
-    feedback: [Comment.schema],
-    students: [String],
+    // feedback: [extras.commentSchema],
+    students: [{type: mongoose.Schema.Types.ObjectId, ref: 'Student'}],
     memberSince: Date,
-    account: tutor
+    account: String
 }, {
     timestamps: true
 });
