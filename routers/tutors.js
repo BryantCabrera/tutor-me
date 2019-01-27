@@ -40,10 +40,15 @@ router.post('/', async (req, res) => {
 });
 
 //Edit Route
-router.get('/:id/edit', (req, res) => {
-    // try {
-    //     const foundTutor = await
-    // }
+router.get('/:id/edit', async (req, res) => {
+    try {
+        const foundTutor = await Tutor.findById(req.params.id);
+        res.render('../views/tutors/edit.ejs', {
+            tutor: foundTutor
+        });
+    } catch (err) {
+        res.send(err);
+    }
 });
 
 //Update Route
