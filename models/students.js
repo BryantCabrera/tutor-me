@@ -16,6 +16,8 @@ const studentSchema = new mongoose.Schema({
     tutors: [String],
     memberSince: Date,
     account: student
+}, {
+    timestamps: true
 });
 
 const Student = mongoose.model('Student', studentSchema);

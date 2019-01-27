@@ -18,6 +18,8 @@ const tutorSchema = new mongoose.Schema({
     students: [Student.schema],
     memberSince: Date,
     account: tutor
+}, {
+    timestamps: true
 });
 
 const Tutor = mongoose.model('Tutor', tutorSchema);
