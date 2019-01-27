@@ -23,7 +23,11 @@ router.get('/', async (req, res) => {
 
 //New Route
 router.get('/new', (req, res) => {
- 
+    try {
+        res.render('../views/students/new.ejs');
+    } catch (err) {
+        res.send(err);
+    }  
 });
 
 //Create Route
