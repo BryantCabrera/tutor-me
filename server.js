@@ -6,6 +6,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 
+const tutorsRouter = require('./routers/tutors');
 
 /********** MIDDLEWARE **********/
 app.use(bodyParser.urlencoded({extended: true}));
@@ -13,7 +14,7 @@ app.use(methodOverride('_method'));
 app.use(express.static('public'));
 
 /********** ROUTERS/CONTROLLERS **********/
-
+app.use('/tutors', tutorsRouter);
 
 //Index Route: Home
 app.get('/', (req, res) => {
