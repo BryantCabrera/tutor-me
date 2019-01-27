@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
 
         res.render('../views/tutors/index.ejs', {
             tutors: allTutors
-        })
+        });
     } catch (err) {
         res.send(err);
     }
