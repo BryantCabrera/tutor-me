@@ -8,8 +8,16 @@ const Tutor = require('../models/tutors');
 
 /********** ROUTES **********/
 //Index Route
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
+    try {
+        const allTutors = await Tutor.find({});
 
+        res.render('../views/tutors/index.ejs', {
+            tutors: allTutors
+        })
+    } catch (err) {
+        res.send(err);
+    }
 });
 
 //New Route
