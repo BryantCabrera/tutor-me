@@ -54,7 +54,13 @@ router.get('/:id/edit', async (req, res) => {
 
 //Update Route
 router.put('/:id', async (req, res) => {
+    try {
+        const updatedStudent = await Student.findByIdAndUpdate(req.params.id, req.body, {new: true});
 
+        res.redirect(`/students/${updatedStudent._id}`);
+    } catch (err) {
+        res.send(err);
+    }
 });
 
 //Show Route
