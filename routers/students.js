@@ -34,7 +34,7 @@ router.get('/new', (req, res) => {
 router.post('/', async (req, res) => {
     try {
         const createdStudent = await Student.create(req.body);
-        res.redirect(`/tutors/${createdStudent._id}/edit`);
+        res.redirect(`/students/${createdStudent._id}/edit`);
     } catch (err) {
         res.send(err);
     }
@@ -42,7 +42,14 @@ router.post('/', async (req, res) => {
 
 //Edit Route
 router.get('/:id/edit', async (req, res) => {
-
+    try {
+        const foundStudent = await Student.findById(req.params.id);
+        res.render('../views/students/edit.ejs', {
+            tutor: foundStudent
+        });
+    } catch (err) {
+        res.send(err);
+    }
 });
 
 //Update Route
