@@ -52,8 +52,14 @@ router.get('/:id/edit', async (req, res) => {
 });
 
 //Update Route
-router.put('/:id', (req, res) => {
+router.put('/:id', async (req, res) => {
+    try {
+        const updatedTutor = await Tutor.findByIdAndUpdate(req.params.id, req.body, {new: true});
 
+        res.redirect(`/authors/${updatedTutor._id}`);
+    } catch (err) {
+        res.send(err);
+    }
 });
 
 //Show Route
