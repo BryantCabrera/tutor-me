@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const Comment = require('./comments');
-const Student = require('./students');
 
 const tutorSchema = new mongoose.Schema({
     name: {type: String, required: true},
@@ -15,7 +14,7 @@ const tutorSchema = new mongoose.Schema({
     availability: [Date],
     rating: Number,
     feedback: [Comment.schema],
-    students: [Student.schema],
+    students: [String],
     memberSince: Date,
     account: tutor
 }, {

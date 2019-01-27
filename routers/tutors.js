@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 const Tutor = require('../models/tutors');
+const Student = require('../models/students');
 
 /********** MIDDLEWARE **********/
 
@@ -76,8 +77,28 @@ router.get('/:id', async (req, res) => {
 });
 
 //Delete Route
-router.delete('/:id', (req, res) => {
+router.delete('/:id', async (req, res) => {
+    try {
+        const deletedTutor = await Tutor.findByIdAndRemove(req.params.id);
+        
+        //deletes references to deletedTutor in corresponding Students
+        const deletedTutorStudents = await Student.find({ _id: {$in: deletedTutor.students} });
 
+        deletedTutorStudents.forEach(student => {
+            student.tutors.forEach( (tutor, index) => {
+            if (tutor === deletedTutor._id) {
+                student.splice(index, 1);
+            }
+
+            await student.save();
+        }
+        )});
+
+
+        res.redirect('/auth/logout');
+    } catch (err) {
+        res.send(err);
+    }
 });
 
 /********** EXPORTS **********/
