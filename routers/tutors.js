@@ -56,15 +56,21 @@ router.put('/:id', async (req, res) => {
     try {
         const updatedTutor = await Tutor.findByIdAndUpdate(req.params.id, req.body, {new: true});
 
-        res.redirect(`/authors/${updatedTutor._id}`);
+        res.redirect(`/tutors/${updatedTutor._id}`);
     } catch (err) {
         res.send(err);
     }
 });
 
 //Show Route
-router.get('/:id', (req, res) => {
+router.get('/:id', async (req, res) => {
+    try {
+        const foundTutor = await Tutor.findById(req.params.id);
 
+        res.render('../views/tutors/show.ejs');
+    } catch (err) {
+        res.send(err);
+    }
 });
 
 //Delete Route
