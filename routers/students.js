@@ -65,7 +65,15 @@ router.put('/:id', async (req, res) => {
 
 //Show Route
 router.get('/:id', async (req, res) => {
+    try {
+        const foundStudent = await Student.findById(req.params.id);
 
+        res.render('../views/students/show.ejs', {
+            student: foundStudent
+        });
+    } catch (err) {
+        res.send(err);
+    }
 });
 
 //Delete Route
