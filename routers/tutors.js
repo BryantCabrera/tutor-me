@@ -22,12 +22,20 @@ router.get('/', async (req, res) => {
 
 //New Route
 router.get('/new', (req, res) => {
-    res.render('../views/tutors/new.ejs');
+    try {
+        res.render('../views/tutors/new.ejs');
+    } catch (err) {
+        res.send(err);
+    }  
 });
 
 //Create Route
 router.post('/', (req, res) => {
+    try {
 
+    } catch (err) {
+        res.send(err);
+    }
 });
 
 //Edit Route
