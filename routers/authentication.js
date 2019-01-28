@@ -61,7 +61,7 @@ router.post('/login', async (req, res) => {
             //if passwords match, redirect to appropriate page, else, redirect to splash page and give error message
             if(bcrypt.compareSync(req.body.password, loggedUser.password)) {
                 req.session.message = '';
-                req.session.username = loggedUser.email;
+                req.session.email = loggedUser.email;
                 req.session.logged = true;
 
                 console.log(`/${(loggedUser.account).toLowerCase()}s/${loggedUser._id}`);

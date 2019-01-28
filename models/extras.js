@@ -10,12 +10,6 @@ const subjectSchema = new mongoose.Schema({
     content: String
 });
 
-const tutorSchema = new mongoose.Schema({
-    content: String
-}, {
-    timestamps: true
-}); 
-
 const availabilitySchema = new mongoose.Schema({
     content: Date
 }, {
@@ -23,4 +17,4 @@ const availabilitySchema = new mongoose.Schema({
 }); 
 
 
-module.exports = [commentSchema, subjectSchema, tutorSchema, availabilitySchema];
+module.exports = [commentSchema, subjectSchema, availabilitySchema];
