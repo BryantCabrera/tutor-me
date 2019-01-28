@@ -7,7 +7,7 @@
 
     <ul>
         <% tutors.forEach( tutor => { %>
-            <li><a href=`/tutors/${tutor._id}`><%= tutor.name %></a></li>
+            <li><a href="/tutors/<%= tutor._id %>"><%= tutor.name %></a></li>
         <% }) %>
     </ul>
 </main>
