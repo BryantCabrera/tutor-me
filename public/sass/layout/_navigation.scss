@@ -1,0 +1,23 @@
+header nav ul {
+    display: flex;
+    place-items: center;
+    list-style: none;
+
+    & li {
+        margin-right: .5rem;
+
+        & a:link,
+        & a:visited {
+            text-decoration: none;
+            color: $color-primary;
+            text-transform: uppercase;
+        }
+
+        & a:hover,
+        & a:active {
+            text-decoration: none;
+            color: $color-primary-light;
+            text-transform: uppercase;
+        }
+    }
+}
