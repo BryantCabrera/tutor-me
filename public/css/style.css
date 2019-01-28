@@ -228,3 +228,9 @@ header nav ul {
     text-align: right; }
     .onboarding form input {
       margin: .2rem; }
+
+.index__login--form {
+  display: none; }
+
+.index__register--text {
+  display: none; }

@@ -15,10 +15,10 @@
     <section class="onboarding">
         <h1>Get Started</h1>
         <h2>Sign Up Today!</h2><br>
-        <!-- Registration Form Here -->
+
         <%= message %>
 
-        <div class="register">
+        <div class="index__register--form">
             <h2>Register</h2>
             <form action="/auth/registration" method="POST" accept-charset="etf-8">
             Account Type*: <select name="account">
@@ -35,9 +35,7 @@
             </form><br>
         </div>
 
-        Already a registered user? <a href="#">LogIn</a><br>
-
-        <div class="login">
+        <div class="index__login--form">
             <h2>Login</h2>
             <form action="/auth/login" method="POST" accept-charset="etf-8">
                 Account Type*: <select name="account">
@@ -49,14 +47,42 @@
                 <button type="submit" class="btn">Log In</button>
             </form>
         </div>
+
+        <p class="index__login--text">
+            Already a registered user? <a href="#" class="index__login--btn">LogIn</a>
+        </p>
+
+        <p class="index__register--text">
+            Not registered yet? <a href="#" class="index__register--btn">Register</a>
+        </p>
+
+        
         
     </section>
     <section class="video">
     </section>
 </main>
+
 <section class="lists">
 </section>
 <section class="testimonials">
 </section>
+
+
+<script>
+$('.index__login--btn').on('click', function () {
+    $('.index__login--form').css('display', 'block');
+    $('.index__register--form').css('display', 'none');
+    $('.index__login--text').css('display', 'none');
+    $('.index__register--text').css('display', 'block');
+});
+
+$('.index__register--btn').on('click', function () {
+    $('.index__login--form').css('display', 'none');
+    $('.index__register--form').css('display', 'block');
+    $('.index__login--text').css('display', 'block');
+    $('.index__register--text').css('display', 'none');
+});
+</script>
 
 <%- include('./partials/footer') %>

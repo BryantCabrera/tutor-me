@@ -6,6 +6,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const session = require('express-session');
+const $ = require('jquery');
 
 const tutorsRouter = require('./routers/tutors');
 const studentsRouter = require('./routers/students');
