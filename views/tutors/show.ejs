@@ -1,0 +1,16 @@
+<%- include('../partials/header.ejs', { 
+    title: `Tutors Show Page`
+}); %>
+
+
+<main>
+    <h1>Tutors Index Page</h1>
+
+    <ul>
+        <% tutors.forEach( tutor => { %>
+            <li><a href=`/tutors/${tutor._id}`><%= tutor.name %></a></li>
+        <% }) %>
+    </ul>
+</main> 
+
+<%- include('../partials/footer.ejs') %>

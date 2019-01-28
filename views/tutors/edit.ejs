@@ -1,0 +1,24 @@
+<%- include('../partials/header.ejs', { 
+    title: `${tutor.name}'s Edit Page`
+}); %>
+
+<main>
+    <h1><%= tutor.name %>'s Edit Page</h1>
+
+    <h3>Edit</h3>
+        <form action="/auth/registration" method="POST" accept-charset="etf-8">
+        Account Type*: <select name="account">
+            <option value="Tutor">Tutor</option>
+            <option value="Student">Student</option>
+        </select>
+        Name*: <input type="text" name="name" value="<%= tutor.name %>"><br>
+        Email*: <input type="email" name="email" value="<%= tutor.email %>"><br>
+        Password*: <input type="password" name="password"><br>
+        Rate*: <input type="number" name="rate" value="<%= tutor.rate %>"><br>
+        Payment Info*: <input type="text" name="paymentInfo" value="<%= tutor.paymentInfo %>"><br>
+        Location*: <input type="number" name="location" value="<%= tutor.location %>"><br>
+        <button type="submit">Register</button>
+    </form>
+</main>
+
+<%- include('../partials/footer.ejs') %>

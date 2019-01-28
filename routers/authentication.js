@@ -31,14 +31,15 @@ router.post('/registration', async (req, res) => {
             createdUser = await Student.create(newUser);
         }
         // const createdUser = await (newUser.account).create(userDbEntry);
+        console.log(createdUser + ' this is the created user');
 
         //create a session
         req.session.username = createdUser.username;
         req.session.logged = true;
 
         //redirect to appropriate index
-        console.log(`/${(createdUser.account).toLowerCase()}s/${createdUser._id/edit}`);
-        res.redirect(`/${(createdUser.account).toLowerCase()}s/${createdUser._id/edit}`)
+        console.log(`/${(createdUser.account).toLowerCase()}s/${createdUser._id}/edit`);
+        res.redirect(`/${(createdUser.account).toLowerCase()}s/${createdUser._id}/edit}`);
     } catch (err) {
         res.send(err);
     }
