@@ -21,10 +21,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
 
-/********** ROUTERS/CONTROLLERS **********/
-app.use('/auth', authRouter);
-app.use('/tutors', tutorsRouter);
-app.use('/students', studentsRouter);
+
+
 
 //Index Route: Home
 app.get('/', (req, res) => {
@@ -33,6 +31,11 @@ app.get('/', (req, res) => {
     });
 });
 
+/********** ROUTERS/CONTROLLERS **********/
+app.use('/auth', authRouter);
+app.use((req, res, next) => req.session.logged ? next() : res.redirect('/'));
+app.use('/tutors', tutorsRouter);
+app.use('/students', studentsRouter);
 /********** LISTENER **********/
 app.listen(3000, () => {
     console.log('Server is listening on port 3000.');

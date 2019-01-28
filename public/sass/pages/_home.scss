@@ -2,8 +2,23 @@
     display: flex;
     flex-direction: column;
     place-items: center;
+    height: 40rem;
+    width: 100%;
+    padding: 1rem 0;
+    background-image: linear-gradient(to bottom, rgba(219, 207, 173, 0.8), rgba(212, 184, 104, 0.8)), url('../../imgs/index_header_bg.jpeg');
+    background-size: cover;
+    background-position: top;
+    color: $color-primary-dark;
+
+    & div {
+        text-align: center;
+    }
 
     & form {
-        background-image: linear-gradient(to bottom, $color-primary-dark, $color-primary-light);
+        text-align: right;
+
+        & input {
+            margin: .2rem;
+        }
     }
 }

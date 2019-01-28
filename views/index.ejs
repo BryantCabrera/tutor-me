@@ -17,31 +17,39 @@
         <h2>Sign Up Today!</h2><br>
         <!-- Registration Form Here -->
         <%= message %>
-        <h2>Login</h2>
-        <form action="/auth/login" method="POST" accept-charset="etf-8">
-            Account Type*: <select name="account">
-                <option value="Tutor">Tutor</option>
-                <option value="Student">Student</option>
-            </select><br>
-            Email*: <input type="email" name="email"><br>
-            Password*: <input type="password" name="password"><br>
-            <button type="submit">Log In</button>
-        </form>
 
-        <h2>Register</h2>
-        <form action="/auth/registration" method="POST" accept-charset="etf-8">
-        Account Type*: <select name="account">
-                <option value="Tutor">Tutor</option>
-                <option value="Student">Student</option>
-            </select><br>
-            Name*: <input type="text" name="name"><br>
-            Email*: <input type="email" name="email"><br>
-            Password*: <input type="password" name="password"><br>
-            Rate*: <input type="text" name="rate"><br>
-            Payment Info*: <input type="text" name="paymentInfo"><br>
-            Location*: <input type="number" name="location"><br>
-            <button type="submit">Register</button>
-        </form>
+        <div class="register">
+            <h2>Register</h2>
+            <form action="/auth/registration" method="POST" accept-charset="etf-8">
+            Account Type*: <select name="account">
+                    <option value="Tutor">Tutor</option>
+                    <option value="Student">Student</option>
+                </select><br>
+                Name*: <input type="text" name="name"><br>
+                Email*: <input type="email" name="email"><br>
+                Password*: <input type="password" name="password"><br>
+                Rate*: <input type="text" name="rate"><br>
+                Payment Info*: <input type="text" name="paymentInfo"><br>
+                Location*: <input type="number" name="location"><br>
+                <button type="submit" class="btn">Register</button>
+            </form><br>
+        </div>
+
+        Already a registered user? <a href="#">LogIn</a><br>
+
+        <div class="login">
+            <h2>Login</h2>
+            <form action="/auth/login" method="POST" accept-charset="etf-8">
+                Account Type*: <select name="account">
+                    <option value="Tutor">Tutor</option>
+                    <option value="Student">Student</option>
+                </select><br>
+                Email*: <input type="email" name="email"><br>
+                Password*: <input type="password" name="password"><br>
+                <button type="submit" class="btn">Log In</button>
+            </form>
+        </div>
+        
     </section>
     <section class="video">
     </section>

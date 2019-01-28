@@ -1,10 +1,12 @@
 //Colors
-$color-primary: rgb(212, 184, 104);
-$color-primary-light: rgb(214, 201, 166);
-$color-primary-dark: rgb(212, 160, 17);
+$color-primary: rgb(212, 184, 104); /*D4B868*/
+$color-primary-light: rgb(219, 207, 173); /*DBCFAD*/
+$color-primary-medium: rgb(161, 140, 79); /*A18C4F*/
+$color-primary-dark: rgb(84, 73, 41); /*544929*/
 
-$color-secondary-light: #ffb900;
-$color-secondary-dark: #ff7730;
+$color-secondary-light: rgb(107,98,80); /*6B6250*/
+$color-secondary-medium: rgb(97, 86, 72); /*615648*/
+$color-secondary-dark: rgb(84, 80, 67); /*545043*/
 
 $color-tertiary-light: #2998ff;
 $color-tertiary-dark: #5643fa;
@@ -21,5 +23,7 @@ $color-black: #000;
 
 
 //Fonts
+$default-font-size: 1.6rem;
+
 
 //Sizes

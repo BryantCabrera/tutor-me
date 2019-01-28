@@ -7,8 +7,8 @@ header {
     align-items: center;
     height: 4rem;
     width: 100%;
-    background-image: linear-gradient(to bottom, $color-grey-dark-3, $color-black);
-    color: $color-primary;
+    background-image: linear-gradient(to bottom, $color-primary-light, $color-primary);
+    color: $color-primary-dark;
 
     & img {
         height: 4rem;
