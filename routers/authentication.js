@@ -55,7 +55,7 @@ router.post('/login', async (req, res) => {
         } else if (req.body.account === 'Student') {
             loggedUser = await Student.findOne({email: req.body.email});
         }
-
+        
         //if the email address entered is an existing user in the database, check the password.  If not, redirect to splash page and give error message
         if (loggedUser) {
             //if passwords match, redirect to appropriate page, else, redirect to splash page and give error message
@@ -63,9 +63,12 @@ router.post('/login', async (req, res) => {
                 req.session.message = '';
                 req.session.username = loggedUser.email;
                 req.session.logged = true;
+
+                console.log(`/${(loggedUser.account).toLowerCase()}s/${loggedUser._id}`);
+                res.redirect(`/${(loggedUser.account).toLowerCase()}s/${loggedUser._id}`);
             } else {
                 req.session.message = 'Your password does not match.';
-            res.redirect('/');
+                res.redirect('/');
             }
         } else {
             req.session.message = 'Your username does not exist.';
@@ -78,7 +81,7 @@ router.post('/login', async (req, res) => {
 });
 
 //logout
-router.post('/logout', (req, res) => {
+router.get('/logout', (req, res) => {
     req.session.destroy((err) => err ? res.send(err) : res.redirect('/'));
 });
 
