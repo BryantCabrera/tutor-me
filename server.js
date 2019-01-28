@@ -5,24 +5,32 @@ const app = express();
 
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
+const session = require('express-session');
 
 const tutorsRouter = require('./routers/tutors');
 const studentsRouter = require('./routers/students');
 const authRouter = require('./routers/authentication');
 
 /********** MIDDLEWARE **********/
+app.use(session({
+    secret: "THIS IS A RANDOM STRING SECRET",
+    resave: false,
+    saveUninitialized: false
+}));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
 
 /********** ROUTERS/CONTROLLERS **********/
+app.use('/auth', authRouter);
 app.use('/tutors', tutorsRouter);
 app.use('/students', studentsRouter);
-app.use('/authentication', authRouter);
 
 //Index Route: Home
 app.get('/', (req, res) => {
-    res.render('index.ejs');
+    res.render('index.ejs', {
+        message: req.session.message
+    });
 });
 
 /********** LISTENER **********/
