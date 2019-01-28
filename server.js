@@ -37,6 +37,7 @@ app.use('/auth', authRouter);
 app.use((req, res, next) => req.session.logged ? next() : res.redirect('/'));
 app.use('/tutors', tutorsRouter);
 app.use('/students', studentsRouter);
+
 /********** LISTENER **********/
 app.listen(3000, () => {
     console.log('Server is listening on port 3000.');

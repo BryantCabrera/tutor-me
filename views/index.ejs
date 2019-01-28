@@ -3,11 +3,30 @@
 }); %>
 
 <nav>
-    <ul>
+    <!--<ul>
         <li><a href="#" alt="Log-In Link" title="Log-In Link">Log-In</a></li>
         <li><a href="#" alt="Sign Up Link" title="Sign Up Link">Sign Up</a></li>
         <li><a href="#" alt="Contact Link" title="Contact Link">Contact</a></li>
-    </ul>
+    </ul>-->
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+    
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+    
+        <div class="navigation__background">&nbsp;</div>
+    
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#video" class="navigation__link"><span>01</span>About TutorMe</a></li>
+                <li class="navigation__item"><a href="#benefits" class="navigation__link"><span>02</span>Your Benfits</a></li>
+                <li class="navigation__item"><a href="#testimonials" class="navigation__link"><span>03</span>Testimonials</a></li>
+                <li class="navigation__item"><a href="#onboarding" class="navigation__link index__login--btn"><span>04</span>LogIn</a></li>
+                <li class="navigation__item"><a href="#onboarding" class="navigation__link index__register--btn"><span>05</span>SignUp</a></li>
+            </ul>
+        </nav>
+    </div>
 </nav>
 </header>
 
@@ -59,13 +78,14 @@
         
         
     </section>
-    <section class="video">
+    <section id="video">
     </section>
 </main>
 
-<section class="lists">
+<section id="benefits">
 </section>
-<section class="testimonials">
+<section id="testimonials">
+    
 </section>
 
 
