@@ -39,7 +39,7 @@ router.post('/registration', async (req, res) => {
 
         //redirect to appropriate index
         console.log(`/${(createdUser.account).toLowerCase()}s/${createdUser._id}/edit`);
-        res.redirect(`/${(createdUser.account).toLowerCase()}s/${createdUser._id}/edit}`);
+        res.redirect(`/${(createdUser.account).toLowerCase()}s/${createdUser._id}/edit`);
     } catch (err) {
         res.send(err);
     }
