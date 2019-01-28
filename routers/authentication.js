@@ -37,7 +37,8 @@ router.post('/registration', async (req, res) => {
         req.session.logged = true;
 
         //redirect to appropriate index
-        res.redirect(`/${(createdUser.account).toLowerCase()}s`)
+        console.log(`/${(createdUser.account).toLowerCase()}s/${createdUser._id/edit}`);
+        res.redirect(`/${(createdUser.account).toLowerCase()}s/${createdUser._id/edit}`)
     } catch (err) {
         res.send(err);
     }
