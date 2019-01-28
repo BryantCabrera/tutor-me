@@ -13,11 +13,63 @@ body {
   height: 100vh;
   width: 100vw; }
 
+/******************************/
+/********** Footer **********/
+/******************************/
 footer {
   display: flex;
-  place-items: center;
+  justify-content: space-between;
+  align-items: center;
   background-image: linear-gradient(to top, #333, #000); }
 
+.footer-nav li,
+.social-links li {
+  display: inline-block;
+  margin-right: 20px; }
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+  margin-right: .5rem; }
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+  text-decoration: none;
+  border: 0;
+  color: #d4b868;
+  transition: color 0.2s;
+  font-size: 1.6rem; }
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+  color: #d4b868; }
+
+.social-links li a:link,
+.social-links li a:visited {
+  font-size: 2.6rem; }
+
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-googleplus,
+.ion-social-instagram {
+  transition: color 0.2s; }
+
+.ion-social-facebook:hover {
+  color: #3b5998; }
+
+.ion-social-twitter:hover {
+  color: #00aced; }
+
+.ion-social-googleplus:hover {
+  color: #dd4b39; }
+
+.ion-social-instagram:hover {
+  color: #517fa4; }
+
+/******************************/
+/********** Header **********/
+/******************************/
 header {
   display: flex;
   justify-content: space-between;
@@ -29,6 +81,7 @@ header {
   header img {
     height: 4rem; }
 
+/***** Navigation *****/
 header nav ul {
   display: flex;
   place-items: center;
@@ -45,3 +98,10 @@ header nav ul {
       text-decoration: none;
       color: #d6c9a6;
       text-transform: uppercase; }
+
+.onboarding {
+  display: flex;
+  flex-direction: column;
+  place-items: center; }
+  .onboarding form {
+    background-image: linear-gradient(to bottom, #d4a011, #d6c9a6); }

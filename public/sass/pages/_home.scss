@@ -1,0 +1,9 @@
+.onboarding {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+
+    & form {
+        background-image: linear-gradient(to bottom, $color-primary-dark, $color-primary-light);
+    }
+}
