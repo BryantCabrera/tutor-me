@@ -25,9 +25,9 @@ router.post('/registration', async (req, res) => {
     try {
         //create user
         let createdUser;
-        if (req.body.account === 'tutor') {
+        if (req.body.account === 'Tutor') {
             createdUser = await Tutor.create(newUser);
-        } else if (req.body.account === 'student') {
+        } else if (req.body.account === 'Student') {
             createdUser = await Student.create(newUser);
         }
         // const createdUser = await (newUser.account).create(userDbEntry);
@@ -44,8 +44,36 @@ router.post('/registration', async (req, res) => {
 });
 
 //login
-router.post('/login', (req, res) => {
+router.post('/login', async (req, res) => {
+    try {
+        //find the logged in user
+        let loggedUser;
 
+        if (req.body.account === 'Tutor') {
+            loggedUser = await Tutor.findOne({email: req.body.email});
+        } else if (req.body.account === 'Student') {
+            loggedUser = await Student.findOne({email: req.body.email});
+        }
+
+        //if the email address entered is an existing user in the database, check the password.  If not, redirect to splash page and give error message
+        if (loggedUser) {
+            //if passwords match, redirect to appropriate page, else, redirect to splash page and give error message
+            if(bcrypt.compareSync(req.body.password, loggedUser.password)) {
+                req.session.message = '';
+                req.session.username = loggedUser.email;
+                req.session.logged = true;
+            } else {
+                req.session.message = 'Your password does not match.';
+            res.redirect('/');
+            }
+        } else {
+            req.session.message = 'Your username does not exist.';
+            res.redirect('/');
+        }
+
+    } catch (err) {
+        res.send(err);
+    }
 });
 
 //logout
