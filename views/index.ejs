@@ -14,6 +14,32 @@
 <main>
     <section class="onboarding">
         <!-- Registration Form Here -->
+        <%= message %>
+        <h3>Login</h3>
+        <form action="/auth/login" method="POST" accept-charset="etf-8">
+            Account Type*: <select name="account">
+                <option value="Tutor">Tutor</option>
+                <option value="Student">Student</option>
+            </select>
+            Email*: <input type="email" name="email"><br>
+            Password*: <input type="password" name="password"><br>
+            <button type="submit">Login Cookie Monsta</button>
+        </form>
+
+        <h3>Register</h3>
+        <form action="/auth/registration" method="POST" accept-charset="etf-8">
+        Account Type*: <select name="account">
+                <option value="Tutor">Tutor</option>
+                <option value="Student">Student</option>
+            </select>
+            Name*: <input type="text" name="name"><br>
+            Email*: <input type="email" name="email"><br>
+            Password*: <input type="password" name="password"><br>
+            Rate*: <input type="text" name="rate"><br>
+            Payment Info*: <input type="text" name="paymentInfo"><br>
+            Location*: <input type="number" name="location"><br>
+            <button type="submit">Register</button>
+        </form>
     </section>
 </main>
 
