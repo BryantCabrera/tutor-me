@@ -245,6 +245,134 @@ body {
       .card__price-value {
         font-size: 4rem; } }
 
+.tutors-index__card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 30rem;
+  width: 20rem; }
+  .tutors-index__card__side {
+    height: 40rem;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+    .tutors-index__card__side--front {
+      background-color: #fff; }
+    .tutors-index__card__side--back {
+      transform: rotateY(180deg); }
+      .tutors-index__card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #6b6250, #545043); }
+      .tutors-index__card__side--back-2 {
+        background-image: linear-gradient(to right bottom, #dbcfad, #544929); }
+      .tutors-index__card__side--back-3 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+  .tutors-index__card:hover .tutors-index__card__side--front {
+    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg); }
+  .tutors-index__card:hover .tutors-index__card__side--back {
+    transform: rotateY(0); }
+  .tutors-index__card__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px; }
+    .tutors-index__card__picture--1 {
+      background-image: linear-gradient(to right bottom, #6b6250, #545043), url(../img/nat-5.jpg); }
+    .tutors-index__card__picture--2 {
+      background-image: linear-gradient(to right bottom, #dbcfad, #544929), url(../img/nat-6.jpg); }
+    .tutors-index__card__picture--3 {
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/nat-7.jpg); }
+  .tutors-index__card__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: #fff;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%; }
+  .tutors-index__card__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .tutors-index__card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(107, 98, 80, 0.85), rgba(84, 80, 67, 0.85)); }
+    .tutors-index__card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(219, 207, 173, 0.85), rgba(84, 73, 41, 0.85)); }
+    .tutors-index__card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)); }
+  .tutors-index__card__details {
+    padding: 3rem; }
+    .tutors-index__card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .tutors-index__card__details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem; }
+        .tutors-index__card__details ul li:not(:last-child) {
+          border-bottom: 1px solid #eee; }
+  .tutors-index__card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+  .tutors-index__card__price-box {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 8rem; }
+  .tutors-index__card__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .tutors-index__card__price-value {
+    font-size: 6rem;
+    font-weight: 100; }
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+    .tutors-index__card {
+      height: auto;
+      border-radius: 3px;
+      background-color: #fff;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+      .tutors-index__card__side {
+        height: auto;
+        position: relative;
+        box-shadow: none; }
+        .tutors-index__card__side--back {
+          transform: rotateY(0);
+          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%); }
+      .tutors-index__card:hover .tutors-index__card__side--front {
+        transform: rotateY(0); }
+      .tutors-index__card__details {
+        padding: 1rem 3rem; }
+      .tutors-index__card__cta {
+        position: relative;
+        top: 0%;
+        left: 0;
+        transform: translate(0);
+        width: 100%;
+        padding: 7rem 4rem 4rem 4rem; }
+      .tutors-index__card__price-box {
+        margin-bottom: 3rem; }
+      .tutors-index__card__price-value {
+        font-size: 4rem; } }
+
 /******************************/
 /********** Footer **********/
 /******************************/
@@ -378,7 +506,8 @@ header {
 
 .navigation__checkbox:checked ~ .navigation__background {
   height: 14rem;
-  width: 15rem; }
+  width: 15rem;
+  border-radius: 0.3rem; }
 
 .navigation__checkbox:checked ~ .navigation__background > .navigation__nav {
   display: block;
@@ -443,8 +572,54 @@ header {
 .index__register--text {
   display: none; }
 
-#tutors-show {
-  display: flex;
-  flex-direction: column;
+.tutors-index {
+  text-align: center; }
+
+.tutors-show {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "profile stats" "schedule schedule" "students students";
   justify-content: center;
   align-items: center; }
+  .tutors-show__card {
+    margin-top: 1rem;
+    grid-area: profile;
+    justify-self: center; }
+  .tutors-show__stats {
+    margin-top: 1rem;
+    grid-area: stats;
+    justify-self: center;
+    height: 40rem;
+    width: 30rem;
+    border: 1px solid #545043;
+    border-radius: 0.3rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem #999;
+    text-align: center;
+    font-size: 1.6rem; }
+    .tutors-show__stats h2 {
+      font-size: 2.4rem; }
+  .tutors-show__schedule {
+    grid-area: schedule;
+    justify-self: center;
+    height: 35rem;
+    width: 90vw;
+    border: 1px solid #545043;
+    border-radius: 0.3rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem #999;
+    text-align: center;
+    font-size: 1.6rem; }
+    .tutors-show__schedule h2 {
+      font-size: 2.4rem; }
+  .tutors-show__current-students {
+    grid-area: students;
+    justify-self: center;
+    height: 35rem;
+    width: 90vw;
+    border: 1px solid #545043;
+    border-radius: 0.3rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem #999;
+    text-align: center;
+    font-size: 1.6rem; }
+    .tutors-show__current-students h2 {
+      font-size: 2.4rem; }

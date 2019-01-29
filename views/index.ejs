@@ -2,42 +2,27 @@
     title: 'TutorMe Home Page'
 }); %>
 
-<nav>
-    <!--<ul>
-        <li><a href="#" alt="Log-In Link" title="Log-In Link">Log-In</a></li>
-        <li><a href="#" alt="Sign Up Link" title="Sign Up Link">Sign Up</a></li>
-        <li><a href="#" alt="Contact Link" title="Contact Link">Contact</a></li>
-    </ul>-->
-    <div class="navigation">
-        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
-    
-        <label for="navi-toggle" class="navigation__button">
-            <span class="navigation__icon">&nbsp;</span>
-        </label>
-    
-        <div class="navigation__background">
-    
-            <nav class="navigation__nav">
-                <ul class="navigation__list">
-                    <% if (user && user.account === 'Tutor') { %>
-                        <li class="navigation__item"><a href="/" class="navigation__link"><span>01</span>TutorMe</a></li>
-                        <li class="navigation__item"><a href="/tutors/<%= user._id %>" class="navigation__link"><span>02</span>My Profile</a></li>
-                        <li class="navigation__item"><a href="/tutors/<%= user._id %>/#students" class="navigation__link"><span>03</span>My Students</a></li>
-                        <li class="navigation__item"><a href="/students" class="navigation__link index__login--btn"><span>04</span>Student Search</a></li>
-                        <li class="navigation__item"><a href="/auth/logout" class="navigation__link index__register--btn"><span>05</span>LogOut</a></li>
-                    <% } else { %>
-                        <li class="navigation__item"><a href="#video" class="navigation__link"><span>01</span>TutorMe</a></li>
-                        <li class="navigation__item"><a href="#benefits" class="navigation__link"><span>02</span>Benfits</a></li>
-                        <li class="navigation__item"><a href="#testimonials" class="navigation__link"><span>03</span>Testimonials</a></li>
-                        <li class="navigation__item"><a href="#onboarding" class="navigation__link index__login--btn"><span>04</span>LogIn</a></li>
-                        <li class="navigation__item"><a href="#onboarding" class="navigation__link index__register--btn"><span>05</span>SignUp</a></li>
-                    <% } %>
-                </ul>
-            </nav>
+            <div class="navigation__background">
+                <nav class="navigation__nav">
+                    <ul class="navigation__list">
+                        <% if (user && user.account === 'Tutor') { %>
+                            <li class="navigation__item"><a href="/" class="navigation__link"><span>01</span>TutorMe</a></li>
+                            <li class="navigation__item"><a href="/tutors/<%= user._id %>" class="navigation__link"><span>02</span>My Profile</a></li>
+                            <li class="navigation__item"><a href="/tutors/<%= user._id %>/#students" class="navigation__link"><span>03</span>My Students</a></li>
+                            <li class="navigation__item"><a href="/students" class="navigation__link index__login--btn"><span>04</span>Student Search</a></li>
+                            <li class="navigation__item"><a href="/auth/logout" class="navigation__link index__register--btn"><span>05</span>LogOut</a></li>
+                        <% } else {  %>
+                            <li class="navigation__item"><a href="#video" class="navigation__link"><span>01</span>TutorMe</a></li>
+                            <li class="navigation__item"><a href="#benefits" class="navigation__link"><span>02</span>Benfits</a></li>
+                            <li class="navigation__item"><a href="#testimonials" class="navigation__link"><span>03</span>Testimonials</a></li>
+                            <li class="navigation__item"><a href="#onboarding" class="navigation__link index__login--btn"><span>04</span>LogIn</a></li>
+                            <li class="navigation__item"><a href="#onboarding" class="navigation__link index__register--btn"><span>05</span>SignUp</a></li>
+                        <% } %>
+                    </ul>
+                </nav>
+            </div>      
         </div>
-        
-    </div>
-</nav>
+    </nav>
 </header>
 
 <main>

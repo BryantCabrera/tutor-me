@@ -81,6 +81,7 @@
     &__checkbox:checked ~ &__background {
         height: 14rem;
         width: 15rem;
+        border-radius: $border-radius-medium;
     }
 
     &__checkbox:checked ~ &__background > &__nav {

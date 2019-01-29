@@ -13,6 +13,7 @@ router.post('/registration', async (req, res) => {
     let newUser = {};
     newUser = req.body;
     newUser.password = hashedPassword;
+    newUser.memberSince = new Date();
 
     if (req.body.account === 'Tutor') {
         newUser.account = 'Tutor';
