@@ -25,7 +25,7 @@
 </nav>
 </header>
 
-<main>
+<main id="tutors-show">
     <h1><%= tutor.name %>'s Show Page</h1>
     <!--
     <ul>
@@ -46,9 +46,9 @@
             </h4>
             <div class="card__details">
                 <ul>
-                    <li>3 day tours</li>
-                    <li>Email Address: <%= tutor.email %></li>
+                    <li>Email: <%= tutor.email %></li>
                     <li>Location: <%= tutor.location %></li>
+                    <li><%= tutor.description %></li>
                 </ul>
             </div>
         </div>

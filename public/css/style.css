@@ -314,29 +314,6 @@ header {
     height: 4rem; }
 
 /***** Navigation *****/
-/* header nav ul {
-    display: flex;
-    place-items: center;
-    list-style: none;
-
-    & li {
-        margin-right: .5rem;
-
-        & a:link,
-        & a:visited {
-            text-decoration: none;
-            color: $color-secondary-dark;
-            text-transform: uppercase;
-        }
-
-        & a:hover,
-        & a:active {
-            text-decoration: none;
-            color: $color-primary-light;
-            text-transform: uppercase;
-        }
-    }
-} */
 .navigation__checkbox {
   display: none; }
 
@@ -362,30 +339,22 @@ header {
   border-radius: 0.1rem;
   background-image: radial-gradient(#dbcfad, #544929);
   z-index: 1000;
-  transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: all 0.5s cubic-bezier(0.86, 0, 0.07, 1);
   opacity: .7; }
 
 .navigation__nav {
-  height: 10rem;
-  width: 7rem;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1500;
-  opacity: 0;
-  width: 0;
+  display: none;
+  height: 100%;
+  width: 100%;
+  font-size: 0;
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
 
 .navigation__list {
-  position: absolute;
   height: 100%;
   width: 100%;
+  padding-top: 2rem;
   list-style: none;
-  text-align: center;
   text-align: left; }
-
-.navigation__item {
-  margin: 1rem; }
 
 .navigation__link:link, .navigation__link:visited {
   display: inline-block;
@@ -408,12 +377,12 @@ header {
   transform: translateX(1rem); }
 
 .navigation__checkbox:checked ~ .navigation__background {
-  transform: scaleX(7) scaleY(10) translate(-0.6rem, 0.8rem); }
+  height: 14rem;
+  width: 15rem; }
 
-.navigation__checkbox:checked ~ .navigation__nav {
-  opacity: 1;
-  top: 5%;
-  width: 20%; }
+.navigation__checkbox:checked ~ .navigation__background > .navigation__nav {
+  display: block;
+  font-size: .5rem; }
 
 .navigation__icon {
   position: relative;
@@ -473,3 +442,9 @@ header {
 
 .index__register--text {
   display: none; }
+
+#tutors-show {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
