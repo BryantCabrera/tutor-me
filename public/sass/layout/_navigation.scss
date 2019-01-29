@@ -33,7 +33,7 @@
         height: 4rem;
         width: 4rem;
         position: fixed;
-        top: 3rem;
+        top: 0;
         right: 4rem;
         border-radius: 50%;
         z-index: 2000;
@@ -47,7 +47,7 @@
         width: 2rem;
         // border-radius: 50%;
         position: fixed;
-        top: 4rem;
+        top: 1rem;
         right: 5rem;
         border-radius: $border-radius-small;
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
@@ -78,6 +78,7 @@
         // transform: translate(-50%,-50%);
         list-style: none;
         text-align: center;
+        text-align: left;
     }
 
     &__item {
@@ -120,7 +121,7 @@
 
     &__checkbox:checked ~ &__nav {
         opacity: 1;
-        top: 10%;
+        top: 5%;
         width: 20%;
     }
 

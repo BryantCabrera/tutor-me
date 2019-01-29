@@ -31,7 +31,8 @@ app.use((req, res, next) => {
 //Index Route: Home
 app.get('/', (req, res) => {
     res.render('index.ejs', {
-        message: req.session.message
+        message: req.session.message,
+        user: req.session.user
     });
 });
 

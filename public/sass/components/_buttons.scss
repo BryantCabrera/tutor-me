@@ -29,15 +29,6 @@
         -ms-transform: translateY(-.3rem);
         -o-transform: translateY(-.3rem);
         box-shadow: 0 1rem 2rem rgba($color-black, .2);
-
-        &::after {
-            transform: scaleX(1.4) scaleY(1.6);
-            -webkit-transform: scaleX(1.4) scaleY(1.6);
-            -moz-transform: scaleX(1.4) scaleY(1.6);
-            -ms-transform: scaleX(1.4) scaleY(1.6);
-            -o-transform: scaleX(1.4) scaleY(1.6);
-            opacity: 0;
-        }
     }
 
     &:active,

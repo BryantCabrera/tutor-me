@@ -19,11 +19,19 @@
     
         <nav class="navigation__nav">
             <ul class="navigation__list">
-                <li class="navigation__item"><a href="#video" class="navigation__link"><span>01</span>About TutorMe</a></li>
-                <li class="navigation__item"><a href="#benefits" class="navigation__link"><span>02</span>Your Benfits</a></li>
-                <li class="navigation__item"><a href="#testimonials" class="navigation__link"><span>03</span>Testimonials</a></li>
-                <li class="navigation__item"><a href="#onboarding" class="navigation__link index__login--btn"><span>04</span>LogIn</a></li>
-                <li class="navigation__item"><a href="#onboarding" class="navigation__link index__register--btn"><span>05</span>SignUp</a></li>
+                <% if (user.account === 'Tutor') { %>
+                    <li class="navigation__item"><a href="/" class="navigation__link"><span>01</span>About TutorMe</a></li>
+                    <li class="navigation__item"><a href="/tutors/<%= user._id %>" class="navigation__link"><span>02</span>My Profile</a></li>
+                    <li class="navigation__item"><a href="/tutors/<%= user._id %>/#students" class="navigation__link"><span>03</span>My Students</a></li>
+                    <li class="navigation__item"><a href="/students" class="navigation__link index__login--btn"><span>04</span>Student Search</a></li>
+                    <li class="navigation__item"><a href="/auth/logout" class="navigation__link index__register--btn"><span>05</span>LogOut</a></li>
+                <% } else { %>
+                    <li class="navigation__item"><a href="#video" class="navigation__link"><span>01</span>About TutorMe</a></li>
+                    <li class="navigation__item"><a href="#benefits" class="navigation__link"><span>02</span>Your Benfits</a></li>
+                    <li class="navigation__item"><a href="#testimonials" class="navigation__link"><span>03</span>Testimonials</a></li>
+                    <li class="navigation__item"><a href="#onboarding" class="navigation__link index__login--btn"><span>04</span>LogIn</a></li>
+                    <li class="navigation__item"><a href="#onboarding" class="navigation__link index__register--btn"><span>05</span>SignUp</a></li>
+                <% } %>
             </ul>
         </nav>
     </div>

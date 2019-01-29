@@ -66,7 +66,6 @@ router.post('/login', async (req, res) => {
                 req.session.email = loggedUser.email;
                 req.session.logged = true;
 
-                console.log(`/${(loggedUser.account).toLowerCase()}s/${loggedUser._id}`);
                 res.redirect(`/${(loggedUser.account).toLowerCase()}s/${loggedUser._id}`);
             } else {
                 req.session.message = 'Your password does not match.';
