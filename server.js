@@ -22,8 +22,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
 
-
-
+//make user a global variable
+app.use((req, res, next) => {
+    res.locals.user = req.session;
+    next();
+});
 
 //Index Route: Home
 app.get('/', (req, res) => {

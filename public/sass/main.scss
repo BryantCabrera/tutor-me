@@ -8,6 +8,7 @@
 @import "base/utilities";
 
 @import "components/buttons";
+@import "components/card";
 @import "components/video";
 
 @import "layout/footer";
@@ -15,3 +16,9 @@
 @import "layout/navigation";
 
 @import "pages/home";
+@import "pages/tutors-index";
+@import "pages/tutors-show";
+@import "pages/tutors-edit";
+@import "pages/students-index";
+@import "pages/students-show";
+@import "pages/students-edit";

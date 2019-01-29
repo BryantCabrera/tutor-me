@@ -57,10 +57,11 @@
     }
 
     &__nav {
-        height: 100vh;
+        height: 10rem;
+        width: 7rem;
         position: fixed;
         top: 0;
-        left: 0;
+        right: 0;
         z-index: 1500;
 
         opacity: 0;
@@ -70,12 +71,13 @@
 
     &__list {
         position: absolute;
-        top: 27%;
-        left: 85%;
-        transform: translate(-50%,-50%);
+        height: 100%;
+        width: 100%;
+        // top: 27%; //27%
+        // left: 85%; //85%
+        // transform: translate(-50%,-50%);
         list-style: none;
         text-align: center;
-        width: 100%;
     }
 
     &__item {
@@ -118,7 +120,8 @@
 
     &__checkbox:checked ~ &__nav {
         opacity: 1;
-        width: 100%;
+        top: 10%;
+        width: 20%;
     }
 
 

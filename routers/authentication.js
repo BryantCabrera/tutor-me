@@ -34,6 +34,7 @@ router.post('/registration', async (req, res) => {
         // console.log(createdUser + ' this is the created user');
 
         //create a session
+        req.session.user = createdUser; //reassigns global variable from server.js
         req.session.username = createdUser.username;
         req.session.logged = true;
 
@@ -60,6 +61,7 @@ router.post('/login', async (req, res) => {
         if (loggedUser) {
             //if passwords match, redirect to appropriate page, else, redirect to splash page and give error message
             if(bcrypt.compareSync(req.body.password, loggedUser.password)) {
+                req.session.user = loggedUser; //reassigns global variable from server.js
                 req.session.message = '';
                 req.session.email = loggedUser.email;
                 req.session.logged = true;
