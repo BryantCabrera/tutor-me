@@ -27,7 +27,7 @@
                 </div>
 
                 <% if (`${currentUser._id}` === `${student._id}`) { %>
-                    <a href="/tutors/<%= student._id %>/edit" class="btn btn--white">Edit Page</a>
+                    <a href="/students/<%= student._id %>/edit" class="btn btn--white">Edit Page</a>
                 <% } else { %>
                     <a href="mailto:<%= student.email %>?Subject=Interested%20in%20tutoring?" class="btn btn--white">Contact</a>
                 <% } %>

@@ -45,7 +45,7 @@ router.get('/:id/edit', async (req, res) => {
     try {
         const foundStudent = await Student.findById(req.params.id);
         res.render('../views/students/edit.ejs', {
-            tutor: foundStudent
+            student: foundStudent
         });
     } catch (err) {
         res.send(err);
