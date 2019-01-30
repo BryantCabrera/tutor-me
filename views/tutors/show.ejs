@@ -29,7 +29,7 @@
                 <% if (`${currentUser._id}` === `${tutor._id}`) { %>
                     <a href="/tutors/<%= tutor._id %>/edit" class="btn btn--white">Edit Page</a>
                 <% } else { %>
-                    <a href="#popup" class="btn btn--white">Book now!</a>
+                    <a href="mailto:<%= tutor.email %>?Subject=Interested%20in%20tutoring?" class="btn btn--white">Contact</a>
                 <% } %>
             </div>
         </div>
@@ -37,10 +37,12 @@
 
     <div id="stats" class="tutors-show__stats">
         <h2>Stats</h2>
-        # Students: <%= tutor.students.length %><br>
-        Ratings: <%= tutor.rating %><br>
-        Subjects Taught: <%= tutor.subjects %><br>
-        Member Since: <%= tutor.memberSince %><br>
+        <b># Students:</b> <%= tutor.students.length %><br>
+        <b>Ratings:</b> <%= tutor.rating %><br>
+        <b>Subjects Taught:</b> <%= tutor.subjects %><br>
+        <b>Member Since:</b> <%= tutor.memberSince %><br>
+        <b>Location:</b>
+        <div id="map"></div>
     </div>
 
     <div id="schedule" class="tutors-show__schedule">
@@ -66,6 +68,30 @@
             </ul>
         </div>
     <% } %>
+
+    <script>
+        let zipCode = <%= tutor.location %>;
+        let map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: -34.397, lng: 150.644},
+            zoom: 8
+            });
+            let geocoder = new google.maps.Geocoder();
+    
+            geocoder.geocode({'address': zipCode.toString()}, (results, status) => {
+                if (status === 'OK') {
+                    map.setCenter(results[0].geometry.location);
+                    let market = new google.maps.Marker({
+                        map: map,
+                        position: results[0].geometry.location
+                    });
+                }
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyL-Q5BmqKW7KTBbNXkpk2SpZCroN30D0&callback=initMap"
+    async defer></script>
 </main> 
 
 <%- include('../partials/footer.ejs') %>

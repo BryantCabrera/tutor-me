@@ -18,6 +18,9 @@
         margin-top: 1rem;
         grid-area: stats;
         justify-self: center;
+        display: flex;
+        flex-direction: column;
+        place-items: center;
         height: 40rem;
         width: 30rem;
         border: 1px solid $color-secondary-dark; 

@@ -17,7 +17,8 @@ html {
 
 body {
   height: 100vh;
-  width: 100vw; }
+  width: 100vw;
+  background-image: linear-gradient(to bottom, rgba(219, 207, 173, 0.8), rgba(212, 184, 104, 0.8)); }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -374,6 +375,12 @@ body {
       .users-index__cards .card__price-value {
         font-size: 4rem; } }
 
+#map {
+  display: flex;
+  place-items: center;
+  height: 25rem;
+  width: 29rem; }
+
 /******************************/
 /********** Footer **********/
 /******************************/
@@ -598,6 +605,9 @@ header {
     margin-top: 1rem;
     grid-area: stats;
     justify-self: center;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
     height: 40rem;
     width: 30rem;
     border: 1px solid #545043;
@@ -667,6 +677,9 @@ header {
     margin-top: 1rem;
     grid-area: stats;
     justify-self: center;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
     height: 40rem;
     width: 30rem;
     border: 1px solid #545043;

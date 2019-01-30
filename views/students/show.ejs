@@ -37,10 +37,12 @@
 
     <div id="stats" class="students-show__stats">
         <h2>Stats</h2>
-        # Tutors: <%= student.tutors.length %><br>
-        Ratings: <%= student.rating %><br>
-        Subjects: <%= student.subjects %><br>
-        Member Since: <%= student.memberSince %><br>
+        <b># Tutors:</b> <%= student.tutors.length %><br>
+        <b>Ratings:</b> <%= student.rating %><br>
+        <b>Subjects:</b> <%= student.subjects %><br>
+        <b>Member Since:</b> <%= student.memberSince %><br>
+        <b>Location:</b>
+        <div id="map"></div>
     </div>
 
     <div id="schedule" class="students-show__schedule">
@@ -66,6 +68,30 @@
             </ul>
         </div>
     <% } %>
+
+    <script>
+        let zipCode = <%= student.location %>;
+        let map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: -34.397, lng: 150.644},
+            zoom: 8
+            });
+            let geocoder = new google.maps.Geocoder();
+    
+            geocoder.geocode({'address': zipCode.toString()}, (results, status) => {
+                if (status === 'OK') {
+                    map.setCenter(results[0].geometry.location);
+                    let market = new google.maps.Marker({
+                        map: map,
+                        position: results[0].geometry.location
+                    });
+                }
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyL-Q5BmqKW7KTBbNXkpk2SpZCroN30D0&callback=initMap"
+    async defer></script>
 </main> 
 
 <%- include('../partials/footer.ejs') %>
