@@ -5,7 +5,8 @@ const Student = require('../models/students');
 const bcrypt = require('bcryptjs');
 
 //registration
-router.post('/registration', async (req, res) => {
+router.post('/registration/:accountType', async (req, res) => {
+    req.body.account = `${req.params.accountType}`;
     const password = req.body.password;
     const hashedPassword = bcrypt.hashSync(password, bcrypt.genSaltSync(10));
 
@@ -26,9 +27,9 @@ router.post('/registration', async (req, res) => {
     try {
         //create user
         let createdUser;
-        if (req.body.account === 'Tutor') {
+        if (req.params.accountType === 'Tutor') {
             createdUser = await Tutor.create(newUser);
-        } else if (req.body.account === 'Student') {
+        } else if (req.params.accountType === 'Student') {
             createdUser = await Student.create(newUser);
         }
         // const createdUser = await (newUser.account).create(userDbEntry);
@@ -40,7 +41,7 @@ router.post('/registration', async (req, res) => {
         req.session.logged = true;
 
         //redirect to appropriate index
-        res.redirect(`/${(createdUser.account).toLowerCase()}s/${createdUser._id}/edit`);
+        res.redirect(`/${(req.params.accountType).toLowerCase()}s/${createdUser._id}/edit`);
     } catch (err) {
         res.send(err);
     }

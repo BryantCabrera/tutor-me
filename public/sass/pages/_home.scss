@@ -14,6 +14,14 @@
         text-align: center;
     }
 
+    & form div {
+        text-align: right;
+
+        & input {
+            margin: .2rem;
+        }
+    }
+
     & form {
         text-align: right;
 

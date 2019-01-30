@@ -11,20 +11,61 @@
 
         <div class="index__register--form">
             <h2>Register</h2>
-            <form action="/auth/registration" method="POST" accept-charset="etf-8">
-            Account Type*: <select name="account">
+            
+            Account Type*: <select name="account" id="accounts">
                     <option value="Tutor">Tutor</option>
                     <option value="Student">Student</option>
                 </select><br>
-                Name*: <input type="text" name="name"><br>
-                Email*: <input type="email" name="email"><br>
-                Password*: <input type="password" name="password"><br>
-                Rate*: <input type="text" name="rate"><br>
-                Payment Info*: <input type="text" name="paymentInfo"><br>
-                Location*: <input type="number" name="location"><br>
+
+            <form action="/auth/registration/Tutor" method="POST" accept-charset="etf-8" class="tutor-form">
+                Name*: <input type="text" name="name" required><br>
+                Email*: <input type="email" name="email" required><br>
+                Password*: <input type="password" name="password" required><br>
+                Rate*: <input type="text" name="rate" required><br>
+                Payment Info*: <input type="text" name="paymentInfo" required><br>
+                Location*: <input type="number" name="location" required><br>
+                <button type="submit" class="btn">Register</button>
+            </form>
+            <form action="/auth/registration/Student" method="POST" accept-charset="etf-8" class="student-form">
+                Name*: <input type="text" name="name" required><br>
+                Email*: <input type="email" name="email" required><br>
+                Password*: <input type="password" name="password" required><br>
+                Age*: <input type="number" name="age" required><br>
+                Payment Info*: <input type="text" name="paymentInfo" required><br>
+                Location*: <input type="number" name="location" required><br>
                 <button type="submit" class="btn">Register</button>
             </form><br>
         </div>
+        <!--
+        <div class="index__register--form">
+            <h2>Register</h2>
+            <form action="/auth/registration" method="POST" accept-charset="etf-8">
+            Account Type*: <select name="account" id="accounts">
+                    <option value="Tutor">Tutor</option>
+                    <option value="Student">Student</option>
+                </select><br>
+
+                <div class="tutor-form">
+                    Name*: <input type="text" name="name" required><br>
+                    Email*: <input type="email" name="email" required><br>
+                    Password*: <input type="password" name="password" required><br>
+                    Rate*: <input type="text" name="rate" required><br>
+                    Payment Info*: <input type="text" name="paymentInfo" required><br>
+                    Location*: <input type="number" name="location" required><br>
+                </div>
+                
+                <div class="student-form">
+                    Name*: <input type="text" name="name" required><br>
+                    Email*: <input type="email" name="email" required><br>
+                    Password*: <input type="password" name="password" required><br>
+                    Age*: <input type="number" name="age" required><br>
+                    Payment Info*: <input type="text" name="paymentInfo" required><br>
+                    Location*: <input type="number" name="location" required><br>
+                </div> 
+
+                <button type="submit" class="btn">Register</button>
+            </form><br>
+        </div> -->
 
         <div class="index__login--form">
             <h2>Login</h2>
@@ -62,19 +103,36 @@
 
 
 <script>
-$('.index__login--btn').on('click', function () {
-    $('.index__login--form').css('display', 'block');
-    $('.index__register--form').css('display', 'none');
-    $('.index__login--text').css('display', 'none');
-    $('.index__register--text').css('display', 'block');
-});
+    $('.index__login--btn').on('click', function () {
+        $('.index__login--form').css('display', 'block');
+        $('.index__register--form').css('display', 'none');
+        $('.index__login--text').css('display', 'none');
+        $('.index__register--text').css('display', 'block');
+    });
 
-$('.index__register--btn').on('click', function () {
-    $('.index__login--form').css('display', 'none');
-    $('.index__register--form').css('display', 'block');
-    $('.index__login--text').css('display', 'block');
-    $('.index__register--text').css('display', 'none');
-});
+    $('.index__register--btn').on('click', function () {
+        $('.index__login--form').css('display', 'none');
+        $('.index__register--form').css('display', 'block');
+        $('.index__login--text').css('display', 'block');
+        $('.index__register--text').css('display', 'none');
+    });
+
+    
+    $('.student-form').hide();
+
+    $('#accounts').change(function () { 
+        let account = $('#accounts option:selected').val(); 
+
+        if (account == 'Tutor') { 
+            $('.tutor-form').show();
+            $('.student-form').hide();
+            console.log('tutor account');
+        } else if (account == 'Student') { 
+            $('.tutor-form').hide();
+            $('.student-form').show();
+            console.log('student account');
+        } 
+    }); 
 </script>
 
 <%- include('./partials/footer') %>
