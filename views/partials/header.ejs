@@ -33,6 +33,12 @@
                         <li class="navigation__item"><a href="/tutors/<%= currentUser._id %>/#students" class="navigation__link"><span>03</span>My Students</a></li>
                         <li class="navigation__item"><a href="/students" class="navigation__link index__login--btn"><span>04</span>StudentSearch</a></li>
                         <li class="navigation__item"><a href="/auth/logout" class="navigation__link index__register--btn"><span>05</span>LogOut</a></li>
+                    <% } else if (currentUser && currentUser.account === 'Student') { %>
+                        <li class="navigation__item"><a href="/" class="navigation__link"><span>01</span>TutorMe</a></li>
+                        <li class="navigation__item"><a href="/students/<%= currentUser._id %>" class="navigation__link"><span>02</span>My Profile</a></li>
+                        <li class="navigation__item"><a href="/students/<%= currentUser._id %>/#students" class="navigation__link"><span>03</span>My Tutors</a></li>
+                        <li class="navigation__item"><a href="/tutors" class="navigation__link index__login--btn"><span>04</span>TutorSearch</a></li>
+                        <li class="navigation__item"><a href="/auth/logout" class="navigation__link index__register--btn"><span>05</span>LogOut</a></li>
                     <% } else { %>
                         <li class="navigation__item"><a href="#video" class="navigation__link"><span>01</span>TutorMe</a></li>
                         <li class="navigation__item"><a href="#benefits" class="navigation__link"><span>02</span>Benfits</a></li>

@@ -6,7 +6,7 @@
     <h1><%= student.name %>'s Edit Page</h1>
 
     <form action="/students/<%= student._id %>?_method=PUT" method="POST" accept-charset="etf-8">
-        Account Type*: <%= student.account %><br>
+        Account Type*: <input type="text" name="account" value="<%= student.account %>" disabled><br>
         Name*: <input type="text" name="name" value="<%= student.name %>"><br>
         Email*: <input type="email" name="email" value="<%= student.email %>"><br>
         Password*: <input type="password" name="password"><br>

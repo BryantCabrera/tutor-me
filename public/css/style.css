@@ -712,3 +712,13 @@ header {
     font-size: 1.6rem; }
     .students-show__feedback h2 {
       font-size: 2.4rem; }
+
+.students-edit {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  background-image: linear-gradient(to bottom, rgba(219, 207, 173, 0.8), rgba(212, 184, 104, 0.8)); }
+  .students-edit form {
+    text-align: right; }
+    .students-edit form input {
+      margin: .5rem; }
