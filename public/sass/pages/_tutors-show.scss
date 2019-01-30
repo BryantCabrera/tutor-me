@@ -29,8 +29,14 @@
         text-align: center;
         font-size: 1.6rem;
 
-        & h2 {
-            font-size: 2.4rem;
+        & .show__title {
+            width: 100%;
+            background-image: linear-gradient(to bottom, $color-secondary-light, $color-secondary-medium);
+
+            & h2 {
+                font-size: 2.4rem;
+                color: $color-white;
+            }
         }
     }
 
@@ -45,8 +51,14 @@
         text-align: center;
         font-size: 1.6rem;
 
-        & h2 {
-            font-size: 2.4rem;
+        & .show__title {
+            width: 100%;
+            background-image: linear-gradient(to bottom, $color-secondary-light, $color-secondary-medium);
+
+            & h2 {
+                font-size: 2.4rem;
+                color: $color-white;
+            }
         }
     }
 
@@ -61,8 +73,14 @@
         text-align: center;
         font-size: 1.6rem;
 
-        & h2 {
-            font-size: 2.4rem;
+        & .show__title {
+            width: 100%;
+            background-image: linear-gradient(to bottom, $color-secondary-light, $color-secondary-medium);
+
+            & h2 {
+                font-size: 2.4rem;
+                color: $color-white;
+            }
         }
     }
 
@@ -77,8 +95,14 @@
         text-align: center;
         font-size: 1.6rem;
 
-        & h2 {
-            font-size: 2.4rem;
+        & .show__title {
+            width: 100%;
+            background-image: linear-gradient(to bottom, $color-secondary-light, $color-secondary-medium);
+
+            & h2 {
+                font-size: 2.4rem;
+                color: $color-white;
+            }
         }
     }
 }

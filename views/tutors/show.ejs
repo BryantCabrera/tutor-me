@@ -36,7 +36,7 @@
     </div>
 
     <div id="stats" class="tutors-show__stats">
-        <h2>Stats</h2>
+        <div class="show__title"><h2>Stats</h2></div>
         <b># Students:</b> <%= tutor.students.length %><br>
         <b>Ratings:</b> <%= tutor.rating %><br>
         <b>Subjects Taught:</b> <%= tutor.subjects %><br>
@@ -46,13 +46,13 @@
     </div>
 
     <div id="schedule" class="tutors-show__schedule">
-        <h2>Schedule</h2>
+        <div class="show__title"><h2>Schedule</h2></div>
         Schedule API here?
     </div>
 
     <% if (`${currentUser._id}` === `${tutor._id}`) { %>
         <div id="students" class="tutors-show__current-students">
-            <h2>Current Students</h2>
+            <div class="show__title"><h2>Current Students</h2></div>
             <% tutor.students.forEach( student => {%>
 
             <% }); %>
@@ -60,7 +60,7 @@
 
     <% } else { %>
         <div class="tutors-show__feedback">
-            <h2>Feedback</h2>
+            <div class="show__title"><h2>Feedback</h2></div>
             <ul>
                 <% tutor.feedback.forEach( (comment, index) => {%>
                     <li><%= index, comment %></li>

@@ -615,8 +615,12 @@ header {
     box-shadow: 0.2rem 0.2rem 0.2rem #999;
     text-align: center;
     font-size: 1.6rem; }
-    .tutors-show__stats h2 {
-      font-size: 2.4rem; }
+    .tutors-show__stats .show__title {
+      width: 100%;
+      background-image: linear-gradient(to bottom, #6b6250, #615648); }
+      .tutors-show__stats .show__title h2 {
+        font-size: 2.4rem;
+        color: #fff; }
   .tutors-show__schedule {
     grid-area: schedule;
     justify-self: center;
@@ -627,8 +631,12 @@ header {
     box-shadow: 0.2rem 0.2rem 0.2rem #999;
     text-align: center;
     font-size: 1.6rem; }
-    .tutors-show__schedule h2 {
-      font-size: 2.4rem; }
+    .tutors-show__schedule .show__title {
+      width: 100%;
+      background-image: linear-gradient(to bottom, #6b6250, #615648); }
+      .tutors-show__schedule .show__title h2 {
+        font-size: 2.4rem;
+        color: #fff; }
   .tutors-show__current-students {
     grid-area: students;
     justify-self: center;
@@ -639,8 +647,12 @@ header {
     box-shadow: 0.2rem 0.2rem 0.2rem #999;
     text-align: center;
     font-size: 1.6rem; }
-    .tutors-show__current-students h2 {
-      font-size: 2.4rem; }
+    .tutors-show__current-students .show__title {
+      width: 100%;
+      background-image: linear-gradient(to bottom, #6b6250, #615648); }
+      .tutors-show__current-students .show__title h2 {
+        font-size: 2.4rem;
+        color: #fff; }
   .tutors-show__feedback {
     grid-area: students;
     justify-self: center;
@@ -651,8 +663,12 @@ header {
     box-shadow: 0.2rem 0.2rem 0.2rem #999;
     text-align: center;
     font-size: 1.6rem; }
-    .tutors-show__feedback h2 {
-      font-size: 2.4rem; }
+    .tutors-show__feedback .show__title {
+      width: 100%;
+      background-image: linear-gradient(to bottom, #6b6250, #615648); }
+      .tutors-show__feedback .show__title h2 {
+        font-size: 2.4rem;
+        color: #fff; }
 
 .tutors-edit {
   display: flex;
@@ -687,8 +703,12 @@ header {
     box-shadow: 0.2rem 0.2rem 0.2rem #999;
     text-align: center;
     font-size: 1.6rem; }
-    .students-show__stats h2 {
-      font-size: 2.4rem; }
+    .students-show__stats .show__title {
+      width: 100%;
+      background-image: linear-gradient(to bottom, #6b6250, #615648); }
+      .students-show__stats .show__title h2 {
+        font-size: 2.4rem;
+        color: #fff; }
   .students-show__schedule {
     grid-area: schedule;
     justify-self: center;
@@ -699,8 +719,12 @@ header {
     box-shadow: 0.2rem 0.2rem 0.2rem #999;
     text-align: center;
     font-size: 1.6rem; }
-    .students-show__schedule h2 {
-      font-size: 2.4rem; }
+    .students-show__schedule .show__title {
+      width: 100%;
+      background-image: linear-gradient(to bottom, #6b6250, #615648); }
+      .students-show__schedule .show__title h2 {
+        font-size: 2.4rem;
+        color: #fff; }
   .students-show__current-students {
     grid-area: tutors;
     justify-self: center;
@@ -711,8 +735,12 @@ header {
     box-shadow: 0.2rem 0.2rem 0.2rem #999;
     text-align: center;
     font-size: 1.6rem; }
-    .students-show__current-students h2 {
-      font-size: 2.4rem; }
+    .students-show__current-students .show__title {
+      width: 100%;
+      background-image: linear-gradient(to bottom, #6b6250, #615648); }
+      .students-show__current-students .show__title h2 {
+        font-size: 2.4rem;
+        color: #fff; }
   .students-show__feedback {
     grid-area: tutors;
     justify-self: center;
@@ -723,8 +751,12 @@ header {
     box-shadow: 0.2rem 0.2rem 0.2rem #999;
     text-align: center;
     font-size: 1.6rem; }
-    .students-show__feedback h2 {
-      font-size: 2.4rem; }
+    .students-show__feedback .show__title {
+      width: 100%;
+      background-image: linear-gradient(to bottom, #6b6250, #615648); }
+      .students-show__feedback .show__title h2 {
+        font-size: 2.4rem;
+        color: #fff; }
 
 .students-edit {
   display: flex;
