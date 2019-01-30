@@ -5,7 +5,7 @@
 <main class="tutors-edit">
     <h1><%= tutor.name %>'s Edit Page</h1>
 
-    <form action="/auth/registration" method="POST" accept-charset="etf-8">
+    <form action="/tutors/<%= tutor._id %>?_method=PUT" method="POST" accept-charset="etf-8">
         Account Type*: <select name="account">
             <option value="Tutor">Tutor</option>
             <option value="Student">Student</option>
