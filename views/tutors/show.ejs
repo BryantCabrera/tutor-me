@@ -25,7 +25,12 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$<%= tutor.rate %> / hr</p>
                 </div>
-                <a href="#popup" class="btn btn--white">Book now!</a>
+
+                <% if (`${currentUser._id}` === `${tutor._id}`) { %>
+                    <a href="/tutors/<%= tutor._id %>/edit" class="btn btn--white">Edit Page</a>
+                <% } else { %>
+                    <a href="#popup" class="btn btn--white">Book now!</a>
+                <% } %>
             </div>
         </div>
     </div>
