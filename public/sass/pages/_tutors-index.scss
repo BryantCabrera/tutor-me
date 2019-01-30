@@ -1,4 +1,12 @@
 .tutors-index {
-    display: flex;
     text-align: center;
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__card {
+        margin: 1rem;
+    }
 }

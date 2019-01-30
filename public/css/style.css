@@ -573,8 +573,12 @@ header {
   display: none; }
 
 .tutors-index {
-  display: flex;
   text-align: center; }
+  .tutors-index__cards {
+    display: flex;
+    flex-wrap: wrap; }
+  .tutors-index__card {
+    margin: 1rem; }
 
 .tutors-show {
   display: grid;

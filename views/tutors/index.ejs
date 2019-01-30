@@ -5,7 +5,7 @@
 <main class="tutors-index">
     <h1>Tutors Index Page</h1>
 
-    <ul>
+    <ul class="tutors-index__cards">
         <% tutors.forEach( tutor => { %>
             <!--<li><a href="/tutors/<%= tutor._id %>"><%= tutor.name %></a></li>-->
 
@@ -31,7 +31,7 @@
                             <p class="card__price-only">Only</p>
                             <p class="card__price-value">$<%= tutor.rate %> / hr</p>
                         </div>
-                        <a href="#popup" class="btn btn--white">Book now!</a>
+                        <a href="/tutors/<%= tutor._id %>" class="btn btn--white">Book now!</a>
                     </div>
                 </div>
             </div>
