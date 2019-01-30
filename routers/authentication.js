@@ -19,7 +19,7 @@ router.post('/registration/:accountType', async (req, res) => {
     if (req.body.account === 'Tutor') {
         newUser.account = 'Tutor';
     } else if (req.body.account === 'Student') {
-        newUser.account = 'Tutor';
+        newUser.account = 'Student';
     }
     
     // console.log(newUser);
