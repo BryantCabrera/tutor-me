@@ -2,13 +2,13 @@
     title: 'Tutors Index Page'
 }); %>
 
-<main class="tutors-index">
+<main class="users-index">
     <h1>Tutors Index Page</h1>
 
-    <ul class="tutors-index__cards">
+    <ul class="users-index__cards">
         <% tutors.forEach( tutor => { %>
 
-            <div class="card tutors-index__card">
+            <div class="card users-index__card">
                 <div class="card__side card__side--front">
                     <div class="card__picture card__picture--1">
                         &nbsp;
@@ -30,7 +30,7 @@
                             <p class="card__price-only">Only</p>
                             <p class="card__price-value">$<%= tutor.rate %> / hr</p>
                         </div>
-                        <a href="/tutors/<%= tutor._id %>" class="btn btn--white">Book now!</a>
+                        <a href="/tutors/<%= tutor._id %>" class="btn btn--white">View Profile</a>
                     </div>
                 </div>
             </div>
