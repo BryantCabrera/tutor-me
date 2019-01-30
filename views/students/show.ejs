@@ -1,0 +1,71 @@
+<%- include('../partials/header.ejs', { 
+    title: `${student.name}'s Show Page`
+}); %>
+
+<main class="students-show">
+    <div class="card students-show__card">
+        <div class="card__side card__side--front">
+            <div class="card__picture card__picture--1">
+                &nbsp;
+            </div>
+            <h4 class="card__heading">
+                <span class="card__heading-span card__heading-span--1"><%= student.name %></span>
+            </h4>
+            <div class="card__details">
+                <ul>
+                    <li>Email: <%= student.email %></li>
+                    <li>Age: <%= student.age %></li>
+                    <li><%= student.description %></li>
+                </ul>
+            </div>
+        </div>
+        <div class="card__side card__side--back card__side--back-1">
+            <div class="card__cta">
+                <div class="card__price-box">
+                    <p class="card__price-only">Location:</p>
+                    <p class="card__price-value">$<%= student.location %> / hr</p>
+                </div>
+
+                <% if (`${currentUser._id}` === `${student._id}`) { %>
+                    <a href="/tutors/<%= student._id %>/edit" class="btn btn--white">Edit Page</a>
+                <% } else { %>
+                    <a href="mailto:<%= student.email %>?Subject=Interested%20in%20tutoring?" class="btn btn--white">Contact</a>
+                <% } %>
+            </div>
+        </div>
+    </div>
+
+    <div id="stats" class="students-show__stats">
+        <h2>Stats</h2>
+        # Tutors: <%= student.tutors.length %><br>
+        Ratings: <%= student.rating %><br>
+        Subjects: <%= student.subjects %><br>
+        Member Since: <%= student.memberSince %><br>
+    </div>
+
+    <div id="schedule" class="students-show__schedule">
+        <h2>Schedule</h2>
+        Schedule API here?
+    </div>
+
+    <% if (`${currentUser._id}` === `${student._id}`) { %>
+        <div id="students" class="students-show__current-students">
+            <h2>Current Students</h2>
+            <% student.tutors.forEach( tutor => {%>
+
+            <% }); %>
+        </div>
+
+    <% } else { %>
+        <div class="students-show__feedback">
+            <h2>Feedback</h2>
+            <ul>
+                <% student.feedback.forEach( (comment, index) => {%>
+                    <li><%= index, comment %></li>
+                <% }); %>
+            </ul>
+        </div>
+    <% } %>
+</main> 
+
+<%- include('../partials/footer.ejs') %>

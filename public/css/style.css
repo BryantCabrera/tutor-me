@@ -647,3 +647,64 @@ header {
   background-image: linear-gradient(to bottom, rgba(219, 207, 173, 0.8), rgba(212, 184, 104, 0.8)); }
   .tutors-edit form {
     text-align: right; }
+
+.students-show {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "profile stats" "schedule schedule" "tutors tutors";
+  justify-content: center;
+  align-items: center; }
+  .students-show__card {
+    margin-top: 1rem;
+    grid-area: profile;
+    justify-self: center; }
+  .students-show__stats {
+    margin-top: 1rem;
+    grid-area: stats;
+    justify-self: center;
+    height: 40rem;
+    width: 30rem;
+    border: 1px solid #545043;
+    border-radius: 0.3rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem #999;
+    text-align: center;
+    font-size: 1.6rem; }
+    .students-show__stats h2 {
+      font-size: 2.4rem; }
+  .students-show__schedule {
+    grid-area: schedule;
+    justify-self: center;
+    height: 35rem;
+    width: 90vw;
+    border: 1px solid #545043;
+    border-radius: 0.3rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem #999;
+    text-align: center;
+    font-size: 1.6rem; }
+    .students-show__schedule h2 {
+      font-size: 2.4rem; }
+  .students-show__current-students {
+    grid-area: tutors;
+    justify-self: center;
+    height: 35rem;
+    width: 90vw;
+    border: 1px solid #545043;
+    border-radius: 0.3rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem #999;
+    text-align: center;
+    font-size: 1.6rem; }
+    .students-show__current-students h2 {
+      font-size: 2.4rem; }
+  .students-show__feedback {
+    grid-area: tutors;
+    justify-self: center;
+    height: 35rem;
+    width: 90vw;
+    border: 1px solid #545043;
+    border-radius: 0.3rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem #999;
+    text-align: center;
+    font-size: 1.6rem; }
+    .students-show__feedback h2 {
+      font-size: 2.4rem; }
