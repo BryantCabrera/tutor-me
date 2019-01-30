@@ -10,10 +10,10 @@ const tutorSchema = new mongoose.Schema({
     location: {type: Number, required: true},
     profilePicture: String,
     description: String,
-    // subjects: [extras.subjectSchema],
-    // availability: [extras.availabilitySchema],
+    subjects: [extras.subjectSchema],
+    availability: [extras.availabilitySchema],
     rating: Number,
-    // feedback: [extras.commentSchema],
+    feedback: [extras.commentSchema],
     students: [{type: mongoose.Schema.Types.ObjectId, ref: 'Student'}],
     memberSince: Date,
     account: String

@@ -10,10 +10,10 @@ const studentSchema = new mongoose.Schema({
     age: Number,
     profilePicture: String,
     description: String,
-    // subjects: [extras.subjectSchema],
-    // availability: [extras.availabilitySchema],
+    subjects: [extras.subjectSchema],
+    availability: [extras.availabilitySchema],
     rating: Number,
-    // feedback: [extras.commentSchema],
+    feedback: [extras.commentSchema],
     tutors: [{type: mongoose.Schema.Types.ObjectId, ref: 'Tutor'}],
     memberSince: Date,
     account: String

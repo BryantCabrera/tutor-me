@@ -573,6 +573,7 @@ header {
   display: none; }
 
 .tutors-index {
+  display: flex;
   text-align: center; }
 
 .tutors-show {
@@ -622,4 +623,16 @@ header {
     text-align: center;
     font-size: 1.6rem; }
     .tutors-show__current-students h2 {
+      font-size: 2.4rem; }
+  .tutors-show__feedback {
+    grid-area: students;
+    justify-self: center;
+    height: 35rem;
+    width: 90vw;
+    border: 1px solid #545043;
+    border-radius: 0.3rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem #999;
+    text-align: center;
+    font-size: 1.6rem; }
+    .tutors-show__feedback h2 {
       font-size: 2.4rem; }

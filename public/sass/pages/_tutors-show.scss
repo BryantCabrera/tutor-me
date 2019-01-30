@@ -62,4 +62,20 @@
             font-size: 2.4rem;
         }
     }
+
+    &__feedback {
+        grid-area: students;
+        justify-self: center;
+        height: 35rem;
+        width: 90vw;
+        border: 1px solid $color-secondary-dark; 
+        border-radius: $border-radius-medium;
+        box-shadow: .2rem .2rem .2rem $color-grey-dark-2;
+        text-align: center;
+        font-size: 1.6rem;
+
+        & h2 {
+            font-size: 2.4rem;
+        }
+    }
 }

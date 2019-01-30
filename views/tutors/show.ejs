@@ -30,7 +30,7 @@
         </div>
     </div>
 
-    <div class="tutors-show__stats">
+    <div id="stats" class="tutors-show__stats">
         <h2>Stats</h2>
         # Students: <%= tutor.students.length %><br>
         Ratings: <%= tutor.rating %><br>
@@ -38,17 +38,29 @@
         Member Since: <%= tutor.memberSince %><br>
     </div>
 
-    <div class="tutors-show__schedule">
+    <div id="schedule" class="tutors-show__schedule">
         <h2>Schedule</h2>
         Schedule API here?
     </div>
 
-    <div class="tutors-show__current-students">
-        <h2>Current Students</h2>
-        <% tutor.students.forEach( student => {%>
+    <% if (`${currentUser._id}` === `${tutor._id}`) { %>
+        <div id="students" class="tutors-show__current-students">
+            <h2>Current Students</h2>
+            <% tutor.students.forEach( student => {%>
 
-        <% }); %>
-    </div>
+            <% }); %>
+        </div>
+
+    <% } else { %>
+        <div class="tutors-show__feedback">
+            <h2>Feedback</h2>
+            <ul>
+                <% tutor.feedback.forEach( (comment, index) => {%>
+                    <li><%= index, comment %></li>
+                <% }); %>
+            </ul>
+        </div>
+    <% } %>
 </main> 
 
 <%- include('../partials/footer.ejs') %>

@@ -17,4 +17,4 @@ const availabilitySchema = new mongoose.Schema({
 }); 
 
 
-module.exports = [commentSchema, subjectSchema, availabilitySchema];
+module.exports = {commentSchema, subjectSchema, availabilitySchema};
