@@ -218,9 +218,10 @@
 }
 
 
-.tutors-index__card {
+.tutors-index__cards .card {
 
     //FUNCTIONALITY
+    margin: 2rem;
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
@@ -228,7 +229,7 @@
     width: 20rem;
     
     &__side {
-        height: 40rem;
+        height: 30rem;
         transition: all .8s ease;
         position: absolute;
         top: 0;
@@ -278,7 +279,7 @@
     //FRONT SIDE STYLING
     &__picture {
         background-size: cover;
-        height: 23rem;
+        height: 15rem;
         background-blend-mode: screen;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
