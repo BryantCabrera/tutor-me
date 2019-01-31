@@ -67,11 +67,11 @@ router.put('/:id', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         const foundTutor = await Tutor.findById(req.params.id);
-        const foundTutorsStudents = await Student.find({ _id: {$in: foundTutor.students} });
+        const foundTutorStudents = await Student.find({ _id: {$in: foundTutor.students} });
 
         res.render('../views/tutors/show.ejs', {
             tutor: foundTutor,
-            students: foundTutorsStudents
+            students: foundTutorStudents
         });
     } catch (err) {
         res.send(err);
