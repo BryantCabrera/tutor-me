@@ -101,5 +101,27 @@ router.delete('/:id', async (req, res) => {
     }
 });
 
+//Add Tutor Route
+router.post('/:studentId/:tutorId', async (req, res) => {
+    try {
+        const tutor = await Tutor.findById(req.params.tutorId);
+        const student = await Student.findById(req.params.studentId);
+
+        tutor.students.push(student._id);
+        student.tutors.push(tutor._id);
+
+        tutor.save();
+        student.save();
+
+        console.log(tutor + ' this is the updated tutor');
+        console.log(student + ' this is the updated student');
+
+        res.redirect(`/students/${req.params.studentId}`);
+    } catch (err) {
+        console.log(err);
+        res.send(err);
+    }
+    
+});
 /********** EXPORTS **********/
 module.exports = router;

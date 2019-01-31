@@ -14,6 +14,7 @@ const studentSchema = new mongoose.Schema({
     availability: [extras.availabilitySchema],
     rating: Number,
     feedback: [extras.commentSchema],
+    comments: [extras.commentSchema],
     tutors: [{type: mongoose.Schema.Types.ObjectId, ref: 'Tutor'}],
     memberSince: Date,
     account: String
