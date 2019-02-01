@@ -1,6 +1,6 @@
 .home {
     & section:not(:last-child) h2 {
-        font-size: 2.4rem;
+        font-size: 3rem;
         color: $color-secondary-medium;
     }
 
@@ -40,11 +40,22 @@
     & .index__login--form {
         display: none;
     }
+
+    & .index__register--text,
+    & .index__login--text {
+        font-size: 1.4rem;
+    }
     
     & .index__register--text {
         display: none;
     }
     
+    & .index__register--form,
+    & .index__login--form {
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+
     & .message {
         font-size: 2rem;
         font-weight: 700;
@@ -62,9 +73,66 @@
 
     /** Benefits **/
     & .benefits {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 3rem 1fr 1fr;
+        grid-template-areas:  "title title"
+                              "img list"
+                              "img list";
         height: 32.6rem;
         width: 100%;
         background-color: linear-gradient(to bottom, $color-primary-light, $color-primary);
+
+        &__title {
+            grid-area: title;
+            justify-self: center;
+        }
+
+        & img {
+            grid-area: img;
+        }
+
+        &__list {
+            grid-area: list;
+            padding-left: 3%;
+            text-align: left;
+            font-size: 1.6rem;
+            
+            &--item {
+                display: flex;
+                place-items: center;
+
+                &:last-of-type {
+                    margin-bottom: 2rem;
+                }
+
+                & div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 2.5rem;
+                    padding: .5rem;
+                    height: 5.4rem;
+                    width: 5.4rem;
+                    border: 2px solid $color-tertiary-dark;
+                    border-radius: 50%;
+                    color: $color-tertiary-dark;
+                    text-align: center;
+                    font-size: 150%;
+                }
+            }
+
+            & .btn-app:link,
+            & .btn-app:visited {
+                border: 0;
+            }
+
+            & .btn-app img {
+                margin-right: 1rem;
+                height: 5rem;
+                width: auto;
+            }
+        }
     }
 
     /** Testimonials **/

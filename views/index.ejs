@@ -23,7 +23,7 @@
                 Password*: <input type="password" name="password" required><br>
                 Rate*: <input type="text" name="rate" required><br>
                 Payment Info*: <input type="text" name="paymentInfo" required><br>
-                Location*: <input type="number" name="location" required><br>
+                Location*: <input type="number" minlength="5" maxlength="5" name="location" required title="Enter Zip Code"><br>
                 <button type="submit" class="btn">Register</button>
             </form>
             <form action="/auth/registration/Student" method="POST" accept-charset="etf-8" class="student-form">
@@ -32,7 +32,7 @@
                 Password*: <input type="password" name="password" required><br>
                 Age*: <input type="number" name="age" required><br>
                 Payment Info*: <input type="text" name="paymentInfo" required><br>
-                Location*: <input type="number" name="location" required><br>
+                Location*: <input type="number" minlength="5" maxlength="5" name="location" required title="Enter Zip Code"><br>
                 <button type="submit" class="btn">Register</button>
             </form><br>
         </div>
@@ -94,7 +94,27 @@
     </section>
 
     <section id="benefits" class="benefits">
-        
+        <div class="benefits__title">
+            <h2>Benefits &mdash; there are many</h2>
+        </div>
+        <img src="resources/img/app-iPhone.png" alt="TutorMe app on iPhone" title="TutorMe app on iPhone" class="app-screen">
+        <div class="benefits__list">
+            <div class="benefits__list--item">
+                <div>1</div>
+                <p>Exposure to many potential clients/teachers.</p>
+            </div>
+            <div class="benefits__list--item">
+                <div>2</div>
+                <p>Connect with the push of a button.</p>
+            </div>
+            <div class="benefits__list--item">
+                <div>3</div>
+                <p>Keeps roster organized.</p>
+            </div>
+            
+            <a href="#" class="btn-app"><img src="/imgs/download-app.svg" alt="App Store Button" title="App Store Button"></a>
+            <a href="#" class="btn-app"><img src="/imgs/download-app-android.png" alt="Play Store Button" title="Play Store Button"></a>
+        </div>
     </section>
 
     <section id="testimonials" class="testimonials">
@@ -108,7 +128,7 @@
             </blockquote>
 
             <blockquote class="testimonials__quotes--2">
-                As a tutor, I have had an amazing time at TutoMe.  I can set my rates, schedule, and contact students at the touch of a button.  We have lots of tutoring sites here in Los Angeles, but no one comes close to TutorMe!
+                As a tutor, I have had an amazing time at TutorMe.  I can set my rates, schedule, and contact students at the touch of a button.  We have lots of tutoring sites here in Los Angeles, but no one comes close to TutorMe!
                 <cite><img src="/imgs/profile-pictures/Michael.png" alt="Customer 2 photo" title="Customer 2 photo">Michael Siller</cite>
             </blockquote>
 

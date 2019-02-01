@@ -11,7 +11,10 @@ header {
     color: $color-primary-dark;
 
     & img {
-        height: 4rem;
+        height: 3rem;
     }
 
+    & h1 {
+        margin-right: 5rem;
+    }
 }

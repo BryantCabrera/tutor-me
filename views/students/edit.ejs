@@ -10,7 +10,7 @@
         Name*: <input type="text" name="name" value="<%= student.name %>"><br>
         Email*: <input type="email" name="email" value="<%= student.email %>"><br>
         Payment Info*: <input type="text" name="paymentInfo" value="<%= student.paymentInfo %>"><br>
-        Location*: <input type="number" name="location" value="<%= student.location %>"><br>
+        Location*: <input type="number" minlength="5" maxlength="5" name="location" required title="Enter Zip Code" value="<%= student.location %>"><br>
         Age: <input type="number" name="age" value="<%= student.age %>"><br>
         Profile Picture URL: <input type="text" name="profilePicture" value="<%= student.profilePicture %>"><br>
         Subjects: <input type="text" name="subjects" value="<%= student.subjects %>"><br>

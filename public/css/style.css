@@ -402,7 +402,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-image: linear-gradient(to top, #333, #000); }
+  background-image: linear-gradient(to top, #000, #333); }
 
 .footer-nav li,
 .social-links li {
@@ -461,7 +461,9 @@ header {
   background-image: linear-gradient(to bottom, #dbcfad, #d4b868);
   color: #544929; }
   header img {
-    height: 4rem; }
+    height: 3rem; }
+  header h1 {
+    margin-right: 5rem; }
 
 /***** Navigation *****/
 .navigation__checkbox {
@@ -576,7 +578,7 @@ header {
   /** Benefits **/
   /** Testimonials **/ }
   .home section:not(:last-child) h2 {
-    font-size: 2.4rem;
+    font-size: 3rem;
     color: #615648; }
   .home .onboarding {
     display: flex;
@@ -601,8 +603,15 @@ header {
         margin: .2rem; }
   .home .index__login--form {
     display: none; }
+  .home .index__register--text,
+  .home .index__login--text {
+    font-size: 1.4rem; }
   .home .index__register--text {
     display: none; }
+  .home .index__register--form,
+  .home .index__login--form {
+    font-size: 1.6rem;
+    font-weight: 500; }
   .home .message {
     font-size: 2rem;
     font-weight: 700;
@@ -614,9 +623,48 @@ header {
     height: 32.6rem;
     width: 100%; }
   .home .benefits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3rem 1fr 1fr;
+    grid-template-areas: "title title" "img list" "img list";
     height: 32.6rem;
     width: 100%;
     background-color: linear-gradient(to bottom, #dbcfad, #d4b868); }
+    .home .benefits__title {
+      grid-area: title;
+      justify-self: center; }
+    .home .benefits img {
+      grid-area: img; }
+    .home .benefits__list {
+      grid-area: list;
+      padding-left: 3%;
+      text-align: left;
+      font-size: 1.6rem; }
+      .home .benefits__list--item {
+        display: flex;
+        place-items: center; }
+        .home .benefits__list--item:last-of-type {
+          margin-bottom: 2rem; }
+        .home .benefits__list--item div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 2.5rem;
+          padding: .5rem;
+          height: 5.4rem;
+          width: 5.4rem;
+          border: 2px solid #5643fa;
+          border-radius: 50%;
+          color: #5643fa;
+          text-align: center;
+          font-size: 150%; }
+      .home .benefits__list .btn-app:link,
+      .home .benefits__list .btn-app:visited {
+        border: 0; }
+      .home .benefits__list .btn-app img {
+        margin-right: 1rem;
+        height: 5rem;
+        width: auto; }
   .home .testimonials {
     display: flex;
     flex-direction: column;
