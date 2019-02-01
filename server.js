@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
 
-//make user a global variable
+//makes user a global variable
 app.use((req, res, next) => {
     res.locals.currentUser = req.session.user;
     next();

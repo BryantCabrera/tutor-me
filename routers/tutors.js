@@ -92,22 +92,6 @@ router.delete('/:id', async (req, res) => {
         });
         console.log(students);
 
-        //alternate way
-        //deletes references to deletedTutor in corresponding Students
-        // const deletedTutorStudents = await Student.find({ _id: {$in: deletedTutor.students} });
-
-        // deletedTutorStudents.forEach(student => {
-        //     student.tutors.forEach(async (tutor, index) => {
-        //     if (tutor === `${deletedTutor._id}`) {
-        //         student.splice(index, 1);
-        //         console.log(tutor);
-        //         console.log(deletedTutor._id);
-        //     }
-
-        //     await student.save();
-        // }
-        // )});
-
         res.redirect('/auth/logout');
     } catch (err) {
         res.send(err);
