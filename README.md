@@ -3,7 +3,7 @@
 ### A. Description
 Bryant Cabrera's TutorMe app is a web-based application which aims to facilitate connections and scheduling between tutors and potential students.  As a private tutor by trade, I wanted to create an app that was a one-stop-shop for all of my scheduling and roster needs.
 
-Link to User Stories: [Link to TutorMe User Stories](https://github.com/BryantCabrera/tutor-me).
+Link to User Stories: [Link to TutorMe User Stories](https://github.com/BryantCabrera/tutor-me/blob/master/user-stories.md).
 
 ### B. Images
 1. Wireframe
@@ -53,11 +53,27 @@ Link to User Stories: [Link to TutorMe User Stories](https://github.com/BryantCa
         1. Select the proper account type.  
         2. Fill out all required fields (marked with an *) and click "register"
     5. To Edit your profile:
+        1. Navigate to your profile.
+        2. Hover over your profile card and click "Edit."
+        3. Edit the information you want and click "Submit."
     6. To Delete your profile:
+        1. Navigate to your profile.
+        2. Hover over your profile card and click "Edit."
+        3. Click the "Delete" button.
+        4. This will delete your profile, log you out, and delete your data from your students'/tutors' data model/profile page.
     7. If you're a student, to add a tutor to your profile:
+        1. Navigate to your desired tutor's profile. (You can get there by clicking the navbar and clicking "Search Tutors").
+        2. Hover over his/her/their profile card and click "Add Tutor."
+        3. This will add the tutor to your data model and profile page and vice versa.
     8. For any account, to add a comment to anyone's profile:
-    9. To Log In
-
+        1. Navigate to your desired tutor's profile.
+        2. Scroll to the bottom of his/her/their profile page to the section titled "Feedback."
+        3. Type in your comment and click "Submit."
+    9. To Log In: 
+        1. Click the hamburger menu and click "Log In."
+        2. Select your account type.
+        3. Type in the email address and password you used to create your account.
+        4. Click the "Log In" button.
     10. To log out: Click the hamburger menu and click "Log Out".
 
 ### E. Next Steps
