@@ -3,8 +3,8 @@
 }); %>
 
 <main class="home">
-    <section class="onboarding">
-        <h1>Get Started</h1>
+    <section id="onboarding" class="onboarding">
+        <h1>Tutor Me</h1>
         <h2>Sign Up Today!</h2><br>
 
         <span class="message"><%= message %></span>
@@ -107,7 +107,7 @@
         <div class="benefits__title">
             <h2>Benefits &mdash; Plenty</h2>
         </div>
-        <img src="resources/img/app-iPhone.png" alt="TutorMe app on iPhone" title="TutorMe app on iPhone" class="app-screen">
+        <img src="/imgs/app-iPhone.png" alt="TutorMe app on iPhone" title="TutorMe app on iPhone" class="app-screen">
         <div class="benefits__list">
             <div class="benefits__list--item">
                 <div>1</div>
@@ -143,7 +143,7 @@
             </blockquote>
 
             <blockquote class="testimonials__quotes--3">
-                As a fulltime pre-med student in college, I was looking for an on-demand tutoring service that could provide quality tutors.  I love that I can see feedback from other students about tutors I'm considering.
+                As a full-time pre-med student in college, I was looking for an on-demand tutoring service that could provide quality tutors.  I love that I can see feedback from other students about tutors I'm considering.
                 <cite><img src="/imgs/profile-pictures/Abraham.png" alt="Customer 3 photo" title="Customer 3 photo">Abraham Hsu</cite>
             </blockquote>
         </div>
@@ -175,11 +175,9 @@
         if (account == 'Tutor') { 
             $('.tutor-form').show();
             $('.student-form').hide();
-            console.log('tutor account');
         } else if (account == 'Student') { 
             $('.tutor-form').hide();
             $('.student-form').show();
-            console.log('student account');
         } 
     }); 
 </script>
