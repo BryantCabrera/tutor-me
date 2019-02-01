@@ -1,3 +1,14 @@
-#feedback ul li {
-    list-style: none;
+.feedback {
+    background-color: rgba($color-grey-dark, .4);
+    height: 75%;
+    overflow-y: scroll;
+
+    & ul {
+        text-align: left;
+
+        & li {
+            margin: 1rem;
+            list-style: none;
+        }
+    }
 }

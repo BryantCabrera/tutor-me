@@ -95,15 +95,29 @@
 
     <% } else { %>
         <div class="tutors-show__feedback">
-            <div class="show__title"><h2>Feedback</h2></div>
-            <ul>
-                <% tutor.feedback.forEach( (comment, index) => {%>
-                    <li><%= index, comment %></li>
-                <% }); %>
-            </ul>
+            <div class="show__title">
+                <h2>Feedback</h2>
+            </div>
+
+            <div id="feedback" class="feedback">
+                <ul>
+                    <% tutor.feedback.forEach( (comment, index) => { %>
+                        <li><%= index + 1 %>.  <%= comment.content %></li>
+                    <% }); %>
+                </ul>
+            </div>
+
+            <form action="/tutors/<%= tutor._id %>/comments" method="POST">
+                <!--<select name="rating">
+                    <option value="1">1 pencil (worst)</option>
+                    <option value="2">2 pencils</option>
+                    <option value="3">3 pencils (best)</option>
+                </select>-->
+                <input type="text" name="content" placeholder="Enter Comment Here">
+                <button type="submit" class="btn">Submit Comment</button>
+            </form>
         </div>
     <% } %>
-
 </main> 
 
 <%- include('../partials/maps.ejs', {

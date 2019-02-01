@@ -114,5 +114,28 @@ router.delete('/:id', async (req, res) => {
     }
 });
 
+//When a Student adds a comment onto Tutor's Page
+router.post('/:id/comments', async (req, res) => {
+    try {
+        const tutor = await Tutor.findById(req.params.id);
+        const student = await Student.findById(req.session.user._id);
+
+        req.body.poster = `${req.session.user._id}`;
+        req.body.postee = `${req.params.id}`;
+
+        // student.rating = (student.rating + req.body.rating)/(student.feedback.length + 1);
+
+        tutor.feedback.push(req.body);
+        student.comments.push(req.body);
+
+        await tutor.save();
+        await student.save();
+
+        res.redirect(`/tutors/${req.params.id}/#feedback`)
+    } catch (err) {
+        res.send(err);
+    } 
+});
+
 /********** EXPORTS **********/
 module.exports = router;
