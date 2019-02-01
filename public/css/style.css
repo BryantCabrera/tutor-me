@@ -507,6 +507,7 @@ header {
   text-align: left; }
 
 .navigation__link:link, .navigation__link:visited {
+  width: 100%;
   display: inline-block;
   font-size: 1rem;
   font-weight: 300;
@@ -570,33 +571,98 @@ header {
   top: 0;
   transform: rotate(-135deg); }
 
-.onboarding {
-  display: flex;
-  flex-direction: column;
-  place-items: center;
-  height: 40rem;
-  width: 100%;
-  padding: 1rem 0;
-  background-image: linear-gradient(to bottom, rgba(219, 207, 173, 0.8), rgba(212, 184, 104, 0.8)), url("../../imgs/index_header_bg.jpeg");
-  background-size: cover;
-  background-position: top;
-  color: #544929; }
-  .onboarding div {
-    text-align: center; }
-  .onboarding form div {
-    text-align: right; }
-    .onboarding form div input {
-      margin: .2rem; }
-  .onboarding form {
-    text-align: right; }
-    .onboarding form input {
-      margin: .2rem; }
-
-.index__login--form {
-  display: none; }
-
-.index__register--text {
-  display: none; }
+.home {
+  /** Videos **/
+  /** Benefits **/
+  /** Testimonials **/ }
+  .home section:not(:last-child) h2 {
+    font-size: 2.4rem;
+    color: #615648; }
+  .home .onboarding {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    height: 40rem;
+    width: 100%;
+    padding: 1rem 0;
+    background-image: linear-gradient(to bottom, rgba(219, 207, 173, 0.8), rgba(212, 184, 104, 0.8)), url("../../imgs/index_header_bg.jpeg");
+    background-size: cover;
+    background-position: top;
+    color: #544929; }
+    .home .onboarding div {
+      text-align: center; }
+    .home .onboarding form div {
+      text-align: right; }
+      .home .onboarding form div input {
+        margin: .2rem; }
+    .home .onboarding form {
+      text-align: right; }
+      .home .onboarding form input {
+        margin: .2rem; }
+  .home .index__login--form {
+    display: none; }
+  .home .index__register--text {
+    display: none; }
+  .home .message {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #9e1616; }
+  .home .video {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    height: 32.6rem;
+    width: 100%; }
+  .home .benefits {
+    height: 32.6rem;
+    width: 100%;
+    background-color: linear-gradient(to bottom, #dbcfad, #d4b868); }
+  .home .testimonials {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../imgs/index_header_bg.jpeg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../imgs/index_header_bg.jpeg");
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed; }
+    .home .testimonials__title {
+      color: #fff;
+      font-size: 1.8rem; }
+    .home .testimonials__quotes {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "quote1 quote2 quote3";
+      font-size: 1.6rem; }
+      .home .testimonials__quotes--1 {
+        grid-area: quote1; }
+      .home .testimonials__quotes--2 {
+        grid-area: quote2; }
+      .home .testimonials__quotes--3 {
+        grid-area: quote3; }
+      .home .testimonials__quotes blockquote {
+        padding: 2%;
+        font-style: italic;
+        line-height: 145%;
+        position: relative;
+        margin-top: 40px; }
+        .home .testimonials__quotes blockquote cite {
+          font-size: 90%;
+          margin-top: 25px;
+          display: block; }
+          .home .testimonials__quotes blockquote cite img {
+            height: 45px;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle; }
+      .home .testimonials__quotes blockquote:before {
+        content: "\201C";
+        font-size: 500%;
+        display: block;
+        position: absolute;
+        top: -5px;
+        left: -5px; }
 
 .users-index {
   text-align: center; }
@@ -691,6 +757,8 @@ header {
   background-image: linear-gradient(to bottom, rgba(219, 207, 173, 0.8), rgba(212, 184, 104, 0.8)); }
   .tutors-edit form {
     text-align: right; }
+    .tutors-edit form input {
+      margin: .2rem; }
 
 .students-show {
   display: grid;

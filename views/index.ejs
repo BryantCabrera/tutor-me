@@ -2,12 +2,12 @@
     title: 'TutorMe Home Page'
 }); %>
 
-<main>
+<main class="home">
     <section class="onboarding">
         <h1>Get Started</h1>
         <h2>Sign Up Today!</h2><br>
 
-        <%= message %>
+        <span class="message"><%= message %></span>
 
         <div class="index__register--form">
             <h2>Register</h2>
@@ -86,20 +86,39 @@
 
         <p class="index__register--text">
             Not registered yet? <a href="#" class="index__register--btn">Register</a>
-        </p>
+        </p>  
+    </section>
 
-        
+    <section id="video" class="video">
+        <h2>Learn More About TutorMe</h2>
+    </section>
+
+    <section id="benefits" class="benefits">
         
     </section>
-    <section id="video">
+
+    <section id="testimonials" class="testimonials">
+        <div class="testimonials__title">
+            <h2>Our customers learn better with us</h2>
+        </div>
+        <div class="testimonials__quotes">
+            <blockquote class="testimonials__quotes--1">
+                TutorMe is just awesome! I just started a new job which leaves me with no time for studying. I'm working towards my web developer degree, and this tutoring service has been a blessing!
+                <cite><img src="/imgs/profile-pictures/Kevin.png" alt="Customer 1 photo" title="Customer 1 photo">Kevin Cuison</cite>
+            </blockquote>
+
+            <blockquote class="testimonials__quotes--2">
+                As a tutor, I have had an amazing time at TutoMe.  I can set my rates, schedule, and contact students at the touch of a button.  We have lots of tutoring sites here in Los Angeles, but no one comes close to TutorMe!
+                <cite><img src="/imgs/profile-pictures/Michael.png" alt="Customer 2 photo" title="Customer 2 photo">Michael Siller</cite>
+            </blockquote>
+
+            <blockquote class="testimonials__quotes--3">
+                As a fulltime pre-med student in college, I was looking for an on-demand tutoring service that could provide quality tutors.  I love that I can see feedback from other students about tutors I'm considering.
+                <cite><img src="/imgs/profile-pictures/Abraham.png" alt="Customer 3 photo" title="Customer 3 photo">Abraham Hsu</cite>
+            </blockquote>
+        </div>
     </section>
 </main>
-
-<section id="benefits">
-</section>
-<section id="testimonials">
-    
-</section>
 
 
 <script>
