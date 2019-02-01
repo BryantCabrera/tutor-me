@@ -44,7 +44,7 @@ Link to User Stories: [Link to TutorMe User Stories](https://github.com/BryantCa
 
 ### D. Getting Started
 1. Link to deployed app on Heroku:
-[GitHub Pages Deployed App](https://bryantcabrera.github.io/tutor-me/#)
+[Heroku Deployed App](https://bryant-tutor-me.herokuapp.com/)
 2. Instructions
     1. Connect to a databse sandbox of your choice.  I used mlab.com and created a sandbox user account so I could populate my app with data.
     2. In the db.js file in the db folder, make sure the connectionString variable is set to your database connection.
