@@ -585,7 +585,7 @@ header {
     flex-direction: column;
     place-items: center;
     height: 40rem;
-    width: 100%;
+    width: 100vw;
     padding: 1rem 0;
     background-image: linear-gradient(to bottom, rgba(219, 207, 173, 0.8), rgba(212, 184, 104, 0.8)), url("../../imgs/index_header_bg.jpeg");
     background-size: cover;
@@ -616,12 +616,49 @@ header {
     font-size: 2rem;
     font-weight: 700;
     color: #9e1616; }
-  .home .video {
+  .home .media {
     display: flex;
     flex-direction: column;
     place-items: center;
     height: 32.6rem;
-    width: 100%; }
+    width: 100vw; }
+    .home .media .composition {
+      position: relative;
+      width: 50%; }
+      .home .media .composition__photo {
+        width: 55%;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+        border-radius: .2rem;
+        -webkit-border-radius: .2rem;
+        -moz-border-radius: .2rem;
+        -ms-border-radius: .2rem;
+        -o-border-radius: .2rem;
+        position: absolute;
+        z-index: 10;
+        transition: all .2s;
+        outline-offset: 2rem; }
+        .home .media .composition__photo--p1 {
+          top: 0rem;
+          left: 0;
+          height: 15rem;
+          width: auto; }
+        .home .media .composition__photo--p2 {
+          top: 2rem;
+          right: 12rem;
+          height: 15rem;
+          width: auto; }
+        .home .media .composition__photo--p3 {
+          top: 10rem;
+          left: 20%;
+          height: 10rem;
+          width: auto; }
+        .home .media .composition__photo:hover {
+          outline: 1.5rem solid #545043;
+          transform: scale(1.05) translateY(-0.5rem);
+          box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+          z-index: 20; }
+      .home .media .composition:hover .home .media .composition__photo:not(:hover) {
+        transform: scale(0.95); }
   .home .benefits {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -653,7 +690,7 @@ header {
           padding: .5rem;
           height: 5.4rem;
           width: 5.4rem;
-          border: 2px solid #5643fa;
+          border: 0.2rem solid #5643fa;
           border-radius: 50%;
           color: #5643fa;
           text-align: center;
@@ -694,23 +731,30 @@ header {
         font-style: italic;
         line-height: 145%;
         position: relative;
-        margin-top: 40px; }
+        margin-top: 4rem; }
         .home .testimonials__quotes blockquote cite {
           font-size: 90%;
-          margin-top: 25px;
+          margin-top: 2.5rem;
           display: block; }
           .home .testimonials__quotes blockquote cite img {
             height: 45px;
             border-radius: 50%;
-            margin-right: 10px;
+            margin-right: 1rem;
             vertical-align: middle; }
       .home .testimonials__quotes blockquote:before {
         content: "\201C";
         font-size: 500%;
         display: block;
         position: absolute;
-        top: -5px;
-        left: -5px; }
+        top: -.5rem;
+        left: -.5rem; }
+      .home .testimonials__quotes blockquote:after {
+        content: "\201D";
+        font-size: 500%;
+        display: block;
+        position: absolute;
+        bottom: 6rem;
+        right: 2rem; }
 
 .users-index {
   text-align: center; }
