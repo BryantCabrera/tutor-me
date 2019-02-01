@@ -7,4 +7,4 @@ User Stories:
 
 > As a user, I want a menu bar to navigate the site easily.
 
->
+> As a user, I want a profile page to display all of my relevant information with a link to edit it.
