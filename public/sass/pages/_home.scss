@@ -28,6 +28,11 @@
         background-size: cover;
         background-position: top;
         color: $color-primary-dark;
+
+        & p {
+            padding-top: 4rem;
+            font-size: 2.4rem;
+        }
     
         & div {
             text-align: center;

@@ -5,88 +5,66 @@
 <main class="home">
     <section id="onboarding" class="onboarding">
         <h1>Tutor Me</h1>
-        <h2>Sign Up Today!</h2><br>
 
-        <span class="message"><%= message %></span>
+        <% if (currentUser) { %>
+            <p>
+                Thank you for joining us.<br>
+                We appreciate your support!
+            </p>
+        <% } else { %>
+            <h2>Sign Up Today!</h2><br>
 
-        <div class="index__register--form">
-            <h2>Register</h2>
-            
-            Account Type*: <select name="account" id="accounts">
-                    <option value="Tutor">Tutor</option>
-                    <option value="Student">Student</option>
-                </select><br>
+            <span class="message"><%= message %></span>
 
-            <form action="/auth/registration/Tutor" method="POST" accept-charset="etf-8" class="tutor-form">
-                Name*: <input type="text" name="name" required><br>
-                Email*: <input type="email" name="email" required><br>
-                Password*: <input type="password" name="password" required><br>
-                Rate*: <input type="text" name="rate" required><br>
-                Payment Info*: <input type="text" name="paymentInfo" required><br>
-                Location*: <input type="number" minlength="5" maxlength="5" name="location" required title="Enter Zip Code"><br>
-                <button type="submit" class="btn">Register</button>
-            </form>
-            <form action="/auth/registration/Student" method="POST" accept-charset="etf-8" class="student-form">
-                Name*: <input type="text" name="name" required><br>
-                Email*: <input type="email" name="email" required><br>
-                Password*: <input type="password" name="password" required><br>
-                Age*: <input type="number" name="age" required><br>
-                Payment Info*: <input type="text" name="paymentInfo" required><br>
-                Location*: <input type="number" minlength="5" maxlength="5" name="location" required title="Enter Zip Code"><br>
-                <button type="submit" class="btn">Register</button>
-            </form><br>
-        </div>
-        <!--
-        <div class="index__register--form">
-            <h2>Register</h2>
-            <form action="/auth/registration" method="POST" accept-charset="etf-8">
-            Account Type*: <select name="account" id="accounts">
-                    <option value="Tutor">Tutor</option>
-                    <option value="Student">Student</option>
-                </select><br>
+            <div class="index__register--form">
+                <h2>Register</h2>
+                
+                Account Type*: <select name="account" id="accounts">
+                        <option value="Tutor">Tutor</option>
+                        <option value="Student">Student</option>
+                    </select><br>
 
-                <div class="tutor-form">
+                <form action="/auth/registration/Tutor" method="POST" accept-charset="etf-8" class="tutor-form">
                     Name*: <input type="text" name="name" required><br>
                     Email*: <input type="email" name="email" required><br>
                     Password*: <input type="password" name="password" required><br>
                     Rate*: <input type="text" name="rate" required><br>
                     Payment Info*: <input type="text" name="paymentInfo" required><br>
-                    Location*: <input type="number" name="location" required><br>
-                </div>
-                
-                <div class="student-form">
+                    Location*: <input type="number" minlength="5" maxlength="5" name="location" required title="Enter Zip Code"><br>
+                    <button type="submit" class="btn">Register</button>
+                </form>
+                <form action="/auth/registration/Student" method="POST" accept-charset="etf-8" class="student-form">
                     Name*: <input type="text" name="name" required><br>
                     Email*: <input type="email" name="email" required><br>
                     Password*: <input type="password" name="password" required><br>
                     Age*: <input type="number" name="age" required><br>
                     Payment Info*: <input type="text" name="paymentInfo" required><br>
-                    Location*: <input type="number" name="location" required><br>
-                </div> 
+                    Location*: <input type="number" minlength="5" maxlength="5" name="location" required title="Enter Zip Code"><br>
+                    <button type="submit" class="btn">Register</button>
+                </form><br>
+            </div>
 
-                <button type="submit" class="btn">Register</button>
-            </form><br>
-        </div> -->
+            <div class="index__login--form">
+                <h2>Login</h2>
+                <form action="/auth/login" method="POST" accept-charset="etf-8">
+                    Account Type*: <select name="account">
+                        <option value="Tutor">Tutor</option>
+                        <option value="Student">Student</option>
+                    </select><br>
+                    Email*: <input type="email" name="email"><br>
+                    Password*: <input type="password" name="password"><br>
+                    <button type="submit" class="btn">Log In</button>
+                </form>
+            </div>
 
-        <div class="index__login--form">
-            <h2>Login</h2>
-            <form action="/auth/login" method="POST" accept-charset="etf-8">
-                Account Type*: <select name="account">
-                    <option value="Tutor">Tutor</option>
-                    <option value="Student">Student</option>
-                </select><br>
-                Email*: <input type="email" name="email"><br>
-                Password*: <input type="password" name="password"><br>
-                <button type="submit" class="btn">Log In</button>
-            </form>
-        </div>
+            <p class="index__login--text">
+                Already a registered user? <a href="#" class="index__login--btn">LogIn</a>
+            </p>
 
-        <p class="index__login--text">
-            Already a registered user? <a href="#" class="index__login--btn">LogIn</a>
-        </p>
-
-        <p class="index__register--text">
-            Not registered yet? <a href="#" class="index__register--btn">Register</a>
-        </p>  
+            <p class="index__register--text">
+                Not registered yet? <a href="#" class="index__register--btn">Register</a>
+            </p>  
+        <% } %>
     </section>
 
     <section id="media" class="media">

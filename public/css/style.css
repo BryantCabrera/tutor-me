@@ -602,6 +602,9 @@ header {
     background-size: cover;
     background-position: top;
     color: #544929; }
+    .home .onboarding p {
+      padding-top: 4rem;
+      font-size: 2.4rem; }
     .home .onboarding div {
       text-align: center; }
     .home .onboarding form div {
@@ -848,6 +851,9 @@ header {
       .tutors-show__schedule .show__title h2 {
         font-size: 2.4rem;
         color: #fff; }
+    .tutors-show__schedule img {
+      height: 80%;
+      width: auto; }
   .tutors-show__current-students {
     grid-area: students;
     justify-self: center;
@@ -938,6 +944,9 @@ header {
       .students-show__schedule .show__title h2 {
         font-size: 2.4rem;
         color: #fff; }
+    .students-show__schedule img {
+      height: 80%;
+      width: auto; }
   .students-show__current-students {
     grid-area: tutors;
     justify-self: center;
