@@ -6,6 +6,7 @@
     <div class="card students-show__card">
         <div class="card__side card__side--front">
             <div class="card__picture card__picture--1">
+                <img src="<%= student.profilePicture %>" alt="<%= student.name %>'s Profile Picture" title="<%= student.name %>'s Profile Picture" class="card__picture--profile"></img>
                 &nbsp;
             </div>
             <h4 class="card__heading">
@@ -54,10 +55,11 @@
         <div id="students" class="students-show__current-students">
             <div class="show__title"><h2>My Tutors</h2></div>
             <ul class="users-index__cards">
-            <% tutors.forEach( tutor => { console.log(student);%>
+            <% tutors.forEach( tutor => { %>
                     <div class="card users-index__card">
                         <div class="card__side card__side--front">
                             <div class="card__picture card__picture--1">
+                                <img src="<%= tutor.profilePicture %>" alt="<%= tutor.name %>'s Profile Picture" title="<%= tutor.name %>'s Profile Picture" class="card__picture--profile"></img>
                                 &nbsp;
                             </div>
                             <h4 class="card__heading">
@@ -87,12 +89,26 @@
 
     <% } else { %>
         <div class="students-show__feedback">
-            <div class="show__title"><h2>Feedback</h2></div>
-            <ul>
-                <% student.feedback.forEach( (comment, index) => {%>
-                    <li><%= index, comment %></li>
-                <% }); %>
-            </ul>
+            <div class="show__title">
+                <h2>Feedback</h2>
+            </div>
+
+            <div id="feedback" class="feedback">
+                <ul>
+                    <% student.feedback.forEach( (comment, index) => { %>
+                        <li><%= index + 1 %>.  <%= comment.content %></li>
+                    <% }); %>
+                </ul>
+            </div>
+            <form action="/students/<%= student._id %>/comments" method="POST">
+                <!--<select name="rating">
+                    <option value="1">1 pencil (worst)</option>
+                    <option value="2">2 pencils</option>
+                    <option value="3">3 pencils (best)</option>
+                </select>-->
+                <input type="text" name="content" placeholder="Enter Comment Here">
+                <button type="submit" class="btn">Submit Comment</button>
+            </form>
         </div>
     <% } %>
 </main> 

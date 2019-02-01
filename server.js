@@ -1,5 +1,5 @@
 /********** REQUIRES **********/
-require('./db/db');
+require('dotenv').config();
 const express = require('express');
 const app = express();
 
@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const session = require('express-session');
 const $ = require('jquery');
+require('./db/db');
 
 const tutorsRouter = require('./routers/tutors');
 const studentsRouter = require('./routers/students');

@@ -82,25 +82,54 @@ router.get('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
     try {
         const deletedStudent = await Student.findByIdAndRemove(req.params.id);
+
+        const tutors = await Tutor.find({'students': req.params.id});
+        console.log(tutors.students + 'this is the tutor\'s students');
+        tutors.forEach(async tutor => {
+            await tutor.students.remove(deletedStudent._id);
+            await tutor.save();  
+        });
         
         //deletes references to deletedStudent in corresponding Students
-        const deletedStudentTutors = await Tutor.find({ _id: {$in: deletedTutor.students} });
+        // const deletedStudentTutors = await Tutor.find({ _id: {$in: deletedTutor.students} });
 
-        deletedStudentTutors.forEach(tutor => {
-            tutor.students.forEach( (student, index) => {
-            if (student === deletedStudent._id) {
-                tutor.splice(index, 1);
-            }
+        // deletedStudentTutors.forEach(tutor => {
+        //     tutor.students.forEach( (student, index) => {
+        //     if (student === deletedStudent._id) {
+        //         tutor.splice(index, 1);
+        //     }
 
-            tutor.save();
-        }
-        )});
-
+        //     tutor.save();
+        // }
+        // )});
 
         res.redirect('/auth/logout');
     } catch (err) {
         res.send(err);
     }
+});
+
+//When a Tutor adds a comment onto Student's Page
+router.post('/:id/comments', async (req, res) => {
+    try {
+        const student = await Student.findById(req.params.id);
+        const tutor = await Tutor.findById(req.session.user._id);
+
+        req.body.poster = `${req.session.user._id}`;
+        req.body.postee = `${req.params.id}`;
+
+        // student.rating = (student.rating + req.body.rating)/(student.feedback.length + 1);
+
+        student.feedback.push(req.body);
+        tutor.comments.push(req.body);
+
+        await student.save();
+        await tutor.save();
+
+        res.redirect(`/students/${req.params.id}/#feedback`)
+    } catch (err) {
+        res.send(err);
+    } 
 });
 
 //Add Tutor Route
@@ -115,15 +144,12 @@ router.post('/:studentId/:tutorId', async (req, res) => {
         tutor.save();
         student.save();
 
-        console.log(tutor + ' this is the updated tutor');
-        console.log(student + ' this is the updated student');
-
         res.redirect(`/students/${req.params.studentId}`);
     } catch (err) {
-        console.log(err);
         res.send(err);
     }
     
 });
+
 /********** EXPORTS **********/
 module.exports = router;

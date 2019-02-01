@@ -66,18 +66,21 @@
         border-top-right-radius: 3px;
         
         &--1 {
-            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), 
-            url(../img/nat-5.jpg);
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
         }
 
         &--2 {
-            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), 
-            url(../img/nat-6.jpg);
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
         }
 
         &--3 {
-            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), 
-            url(../img/nat-7.jpg);
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+        }
+
+        &--profile {
+            height: auto;
+            width: 70%;
+            border-radius: 50%;
         }
     }
 
@@ -287,18 +290,15 @@
         border-top-right-radius: 3px;
         
         &--1 {
-            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), 
-            url(../img/nat-5.jpg);
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
         }
 
         &--2 {
-            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), 
-            url(../img/nat-6.jpg);
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
         }
 
         &--3 {
-            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), 
-            url(../img/nat-7.jpg);
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
         }
     }
 

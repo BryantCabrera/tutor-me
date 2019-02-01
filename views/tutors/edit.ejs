@@ -17,6 +17,13 @@
         Description: <input type="text" name="description" value="<%= tutor.description %>"><br>
         <button type="submit" class="btn">Edit <%= tutor.name %></button>
     </form>
+    
+    <br>
+    <br>
+
+    <form action="/tutors/<%= tutor._id %>?_method=DELETE" method="POST" accept-charset="etf-8">
+        <button type="submit" class="btn">Delete <%= tutor.name %></button>
+    </form>
 </main>
 
 <%- include('../partials/footer.ejs') %>
