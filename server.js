@@ -44,6 +44,6 @@ app.use('/tutors', tutorsRouter);
 app.use('/students', studentsRouter);
 
 /********** LISTENER **********/
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
     console.log('Server is listening on port 3000.');
 });
