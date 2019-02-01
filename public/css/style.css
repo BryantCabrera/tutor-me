@@ -406,6 +406,7 @@ footer {
 
 .footer-nav li,
 .social-links li {
+  margin-left: .5rem;
   display: inline-block;
   margin-right: 20px; }
 
@@ -461,7 +462,8 @@ header {
   background-image: linear-gradient(to bottom, #dbcfad, #d4b868);
   color: #544929; }
   header img {
-    height: 3rem; }
+    height: 3rem;
+    margin-left: .5rem; }
   header h1 {
     margin-right: 5rem; }
 
@@ -626,14 +628,35 @@ header {
     font-weight: 700;
     color: #9e1616; }
   .home .media {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10rem 30rem;
+    grid-template-areas: "title title" "video pics";
     place-items: center;
-    height: 32.6rem;
+    height: 40rem;
     width: 100vw; }
+    .home .media h2 {
+      grid-area: title; }
+    .home .media .video {
+      grid-area: video;
+      justify-self: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%; }
+      .home .media .video iframe {
+        height: auto;
+        width: 95%; }
     .home .media .composition {
+      grid-area: pics;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-self: center;
+      align-self: center;
       position: relative;
-      width: 50%; }
+      height: 100%;
+      width: 100%; }
       .home .media .composition__photo {
         width: 55%;
         box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
