@@ -55,24 +55,24 @@ Link to User Stories: [Link to TutorMe User Stories](https://github.com/BryantCa
     5. To Edit your profile:
         1. Navigate to your profile.
         2. Hover over your profile card and click "Edit".
-        ![Image of Edit Button](edit-button.png)
+        ![Image of Edit Button](public/imgs/README_imgs/edit-button.png)
         3. Edit the information you want and click "Submit."
-        ![Image of Edit Button](edit-page.png)
+        ![Image of Edit Button](public/imgs/README_imgs/edit-page.png)
     6. To Delete your profile:
         1. Navigate to your profile.
         2. Hover over your profile card and click "Edit".
         3. Click the "Delete" button.
-        ![Image of Delete Button](edit-page.png)
+        ![Image of Delete Button](public/imgs/README_imgs/edit-page.png)
         4. This will delete your profile, log you out, and delete your data from your students'/tutors' data model/profile page.
     7. If you're a student, to add a tutor to your profile:
         1. Navigate to your desired tutor's profile. (You can get there by clicking the navbar and clicking "Search Tutors").
         2. Hover over his/her/their profile card and click "Add Tutor".
-        ![Image of Add Tutor Button](add-tutor-button.png)
+        ![Image of Add Tutor Button](public/imgs/README_imgs/add-tutor-button.png)
         3. This will add the tutor to your data model and profile page and vice versa.
     8. For any account, to add a comment to anyone's profile:
         1. Navigate to your desired tutor's profile.
         2. Scroll to the bottom of his/her/their profile page to the section titled "Feedback."
-        ![Image of Feedback Section](feedback-section.png)
+        ![Image of Feedback Section](public/imgs/README_imgs/feedback-section.png)
         3. Type in your comment and click "Submit Comment".
     9. To Log In: 
         1. Click the hamburger menu and click "Log In".
