@@ -16,9 +16,9 @@ Link to User Stories: [Link to TutorMe User Stories](https://github.com/BryantCa
     4. Image of Locate Student/Tutor Section Wireframe
     ![Image of Locate Student/Tutor Section Wireframe](public/imgs/README_imgs/TutorMe_wireframe-locate.png)
 2. NavBar
-    1.  No user logged in
+    1. No user logged in
     ![Image of NavBar with no User Logged In](public/imgs/README_imgs/TutorMe_wireframe-navbar-nouser.png)
-    2.  User logged in
+    2. User logged in
     ![Image of NavBar with User Logged In](public/imgs/README_imgs/TutorMe_wireframe-navbar-user.png)
 
 ### C. Technologies Used
@@ -84,7 +84,7 @@ Link to User Stories: [Link to TutorMe User Stories](https://github.com/BryantCa
 ### E. Next Steps
 1. Unsolved problems
     - [ ] Once logged in, a user can still access other user's edit pages by typing "/edit" after the other profile page's show route url.  I will need to create an if statement using sessions to block access to that particular route from anyone except the account's owner. 
-    - [ ] Update route incorrectly handles addition of information to subjects property
+    - [ ] Update route incorrectly handles addition of information to a model's subjects property
 2. Planned features
     - [ ] Connect scheduling API with intuitive user interface that updates data models' availability property
     - [ ] Comments
@@ -93,4 +93,4 @@ Link to User Stories: [Link to TutorMe User Stories](https://github.com/BryantCa
         - [ ] Make comments Editable
         - [ ] Make comments Deletable
         - [ ] Style comments
-    - [ ] Hide registration/login form when a user is logged in but goes to the home page.
+    - [ ] Separate functions out of the Routers and put them into Controller folders
