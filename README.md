@@ -3,17 +3,18 @@
 ### A. Description
 Bryant Cabrera's TutorMe app is a web-based application which aims to facilitate connections and scheduling between tutors and potential students.  As a private tutor by trade, I wanted to create an app that was a one-stop-shop for all of my scheduling and roster needs.
 
-User Stories: 
-- Tutor - A tutor will use the app to get more exposure for his/her/zher services.  The tutor can use the app to contact nearby potential clients and keep their schedule & roster organized.
-
-- Student - A student will use the app to find nearby tutors.  The student can make a more informed choice because of other students' reviews.  In addition, the student can preview a tutor's availability and subject specialties.
+Link to User Stories: [Link to TutorMe User Stories](https://github.com/BryantCabrera/tutor-me).
 
 ### B. Images
 1. Wireframe
-![Image of Overall Wireframe](public/imgs/README_imgs/TutorMe_wireframe.png)
-![Image of Tutor Section Wireframe](public/imgs/README_imgs/TutorMe_wireframe-tutor.png)
-![Image of Student Section Wireframe](public/imgs/README_imgs/TutorMe_wireframe-student.png)
-![Image of Locate Student/Tutor Section Wireframe](public/imgs/README_imgs/TutorMe_wireframe-locate.png)
+    1. Image of Overall Wireframe
+    ![Image of Overall Wireframe](public/imgs/README_imgs/TutorMe_wireframe.png)
+    2. Image of Tutor Section Wireframe
+    ![Image of Tutor Section Wireframe](public/imgs/README_imgs/TutorMe_wireframe-tutor.png)
+    3. Image of Student Section Wireframe
+    ![Image of Student Section Wireframe](public/imgs/README_imgs/TutorMe_wireframe-student.png)
+    4. Image of Locate Student/Tutor Section Wireframe
+    ![Image of Locate Student/Tutor Section Wireframe](public/imgs/README_imgs/TutorMe_wireframe-locate.png)
 2. NavBar
     1.  No user logged in
     ![Image of NavBar with no User Logged In](public/imgs/README_imgs/TutorMe_wireframe-navbar-nouser.png)
@@ -55,7 +56,9 @@ User Stories:
     6. To Delete your profile:
     7. If you're a student, to add a tutor to your profile:
     8. For any account, to add a comment to anyone's profile:
-    9. To log out: Click the hamburger menu and click "Log Out".
+    9. To Log In
+
+    10. To log out: Click the hamburger menu and click "Log Out".
 
 ### E. Next Steps
 1. Unsolved problems
